@@ -1,4 +1,5 @@
-/* * Make an array method that can return whether or not a context array is a
+/*
+ * Make an array method that can return whether or not a context array is a
  * subset of an input array.  To simplify the problem, you can assume that neither
  * array will contain objects or arrays as elements within them.
  *
@@ -17,7 +18,69 @@
 */
 
 
-/* * Extra credit: Make the method work for arrays that contain objects and/or arrays as elements.*/
+/*
+ * Extra credit: Make the method work for arrays that contain objects and/or arrays as elements.
+*/
+
 
 Array.prototype.isSubsetOf = function (arr) {
-}
+
+	var flag=false;
+	var count=0;
+	for (var i = 0; i < this.length; i++) {
+		var element=this[i];
+		for (var j = 0; j < arr.length; j++) {
+			if(JSON.stringify(element)===JSON.stringify(arr[j])){
+				count++;
+			}
+		}
+	}
+	if(count===this.length)
+		return true;
+	return false;
+}
+
+// Array.prototype.isSubsetOf = function (arr) {
+
+// 	var flag=false;
+// 	var count=0;
+// 	for (var i = 0; i < this.length; i++) {
+// 		var element=this[i];
+// 		//if( typeof(element)===Object){
+// 		// 	console.log(element);
+// 		// 	for (var j = 0; j < arr.length; j++) {
+// 		// 		if(JSON.stringify(element)===JSON.stringify(arr[j])){
+// 		// 			count++;
+// 		// 			break;
+// 		// 		}
+// 		// 	}
+// 		// }
+// 		// else {
+// 			if(arr.indexOf(element)>-1){
+// 				count++;
+// 			 }
+// 		//}
+// 	}
+// 	if(count===this.length)
+// 		return true;
+// 	return false;
+// }
+
+
+// Array.prototype.isSubsetOf = function (arr) {
+// 	var flag=false;
+// 	var count=0;
+// 	for (var i = 0; i < this.length; i++) {
+// 		var element=this[i];
+// 		for (var j = 0; j < arr.length; j++) {
+// 			if(arr[j]===element){
+// 				count++;
+// 				break;
+// 			}
+// 		}
+// 	}
+// 	if(count===this.length)
+// 		return true;
+// 	else
+// 		return false;
+// }
