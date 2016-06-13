@@ -27,9 +27,11 @@ Array.prototype.isSubsetOf = function (arr) {
 	var newArray = [];
 	for(var i=0; i<arr.length; i++){
 		newArray.push(JSON.stringify(arr[i]));
-	}
-	for(var i=0; i<this.length; i++){
+	}//end of for 
+	
+
+	  for(var i=0; i<this.length; i++){
 		result = result && (newArray.indexOf(JSON.stringify(this[i])) !== -1);
-	}
-	return result;
+	  }//end of second for
+ return result;
 }
