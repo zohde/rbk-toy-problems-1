@@ -24,10 +24,24 @@
 
 Array.prototype.isSubsetOf = function (arr) {
 	//first solution 
-	//var subString=arr.join("");
-	//var mainString=this.join("");
-	//console.log(mainString.indexOf(subString) > -1);
-	// it is wroooooong
+	//var bigArray=arr;
+	// var isAll=0;
+	// for (var i in  bigArray) {
+	// 	for (var j in this ) {
+	// 		if(this[j] === bigArray[i]){
+	// 			if (typeof this[j] === "object"){
+	// 				this[j].isSubsetOf(bigArray[i]);
+	// 			 }
+	// 			 isAll++;
+	// 		}
+	// 	}
+	// }
+	// if(isAll === this.length){
+	// 	return true
+	// }
+	// return false;
+
+
 
 	//secand solution
 	var bigArray=arr;
@@ -39,7 +53,7 @@ Array.prototype.isSubsetOf = function (arr) {
 			}
 		}
 	}
-	if(isAll === this.length){
+	if(isAll >= this.length){
 		return true
 	}
 	return false;
