@@ -30,5 +30,5 @@ Array.prototype.isSubsetOf = function (arr) {
 				flag++;
 		}
 	}
-	return flag>0 ? true : false;
+	return flag>= this.length ? true : false;
 }
