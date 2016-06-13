@@ -27,7 +27,7 @@ Array.prototype.isSubsetOf = function (arr) {
 	
 	for (var i = 0; i < arr.length; i++) {
 		for(var j = 0; j < this.length; j++){
-			if(this[j] === arr[i]){
+			if(JSON.stringify(this[j]) === JSON.stringify(arr[i])){
 				bool++
 			}
 		}
