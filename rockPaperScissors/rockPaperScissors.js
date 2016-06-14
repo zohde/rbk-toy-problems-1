@@ -18,5 +18,20 @@
 */
 
 var rockPaperScissors = function() {
-  // fill me out!
+	var rps = ['rock', 'paper', 'scissors'];
+	var solutions = [];
+	var solution = [];
+	var rounds = 3;
+	for (var j=0; j<rps.length; j++){
+		solution[0]=rps[j];
+		for (var x=0; x<rps.length; x++){
+			solution[1] = rps[x];
+			for (var y=0; y<rps.length; y++){
+				solution [2] = rps[y];
+				solutions.push(solution.map(function(e){return e;}));
+			}	
+		}
+	}
+	return solutions;
 };
+
