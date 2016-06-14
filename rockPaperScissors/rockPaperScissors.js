@@ -16,7 +16,6 @@
 * rockPaperScissors(5); // => [['rock', 'rock', 'rock', 'rock', 'rock'], etc...]
 *
 */
-
 var rockPaperScissors = function() {
   // fill me out!
 
@@ -35,9 +34,6 @@ var rockPaperScissors = function() {
 
   return solution;
 };
-
-
-
 // we have only three choices (Rock) or (Paper) or (Scissors)
 // lets assume they are 1 2 3 
 // we will have  a large array that holds the possibilities
@@ -60,4 +56,3 @@ var rockPaperScissors = function() {
 // start at [0,0,0] then [0,0,1] [0,0,2]
 // good so far .
 // then [0,1,0] [0,1,1] [0,1,2]
-
