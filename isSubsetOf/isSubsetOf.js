@@ -24,11 +24,15 @@
 
 Array.prototype.isSubsetOf = function (arr) {
 	var flage = true;
-	for(var i=0 ; i<arr.length ; i++){
-		if(this.indexOf(arr[i]) !== -1){
+	if(!)
+	for(var i=0 ; i<this.length ; i++){
+		if(arr.indexOf(this[i]) !== -1){
 			flage = flage && true;
 		}
+		else{
+			flage = false;
 		}
+	}
 		return flage;
 	}
 
