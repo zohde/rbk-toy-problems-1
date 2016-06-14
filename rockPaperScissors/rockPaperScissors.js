@@ -18,5 +18,18 @@
 */
 
 var rockPaperScissors = function() {
-  // fill me out!
+	var arrayMaster=[];
+	var arraySolutions=["rock","scissors","paper"];
+	var index=0;
+	var array=[];
+	for(var i=0;i<3;i++){
+		for(var j=0;j<3;j++){
+			for(var k=0;k<3;k++){
+				array=[];
+				array.push(arraySolutions[i],arraySolutions[j],arraySolutions[k]);
+				arrayMaster.push(array);
+			}
+		}
+	}
+  	return arrayMaster;
 };
