@@ -23,15 +23,15 @@
 */
 
 Array.prototype.isSubsetOf = function (arr) {
-	var result;
+	var result=0;
 	for(var i=0; i<arr.length; i++){
-		if(this.indexOf(arr[i])>-1){
-			result=result+true;
+		if(arr.indexOf(this[i])>-1){
+			result++;
 		}
-		
-
 	}
-	return result;
+	if(result===this.length){
+		return true;
+	} 
+	return false;
 	
 }
-

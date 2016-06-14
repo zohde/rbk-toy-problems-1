@@ -18,5 +18,22 @@
 */
 
 var rockPaperScissors = function() {
+	var game=["rock", "paper", "scissors"]
+	var newGame=[];
+	var all=[]
+	for (var i = 0; i < game.length; i++) {
+		newGame.push(game[i])
+		for (var i = 0; i < game.length; i++) {
+			newGame.push(game[i])
+			for (var i = 0; i < game.length; i++) {
+				newGame.push(game[i])
+				all.push(newGame);
+			};
+		};
+		
+	};
+
+	
+	return all;
   // fill me out!
 };
