@@ -33,5 +33,5 @@ var rockPaperScissors = function(number) {
 		game.push(["scissors"]);
 	}
   // fill me out!
-  // console.log(rockPaperScissors);
+  return game;
 };
