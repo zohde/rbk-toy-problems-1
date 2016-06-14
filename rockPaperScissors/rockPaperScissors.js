@@ -44,7 +44,7 @@ var rockPaperScissors = function() {
   var game = [];
   var seq = [];
 console.log(seq.length );
-  while(seq.length < 9){
+  while(seq.length < 27){
   	var shoot = randInt();
   	
   	if(shoot === 0){
