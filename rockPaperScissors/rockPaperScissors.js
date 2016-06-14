@@ -41,7 +41,7 @@ var generates=function(valueslength,values){
 var rockPaperScissors = function() {
 	var values=["rock","paper","scissors"];
 	for (var i = 0; i < Math.pow(values.length,values.length); i++) {
-		generates[values.length,values];
+		generates(values.length,values);
 	}
 
 	return array;
