@@ -29,16 +29,16 @@ Array.prototype.isSubsetOf = function (arr) {
 	var counter = 0;
 
 		for(var i = 0 ; i < outArr.length ; i++){
-			for(var j = 0 ; j<arr.length ; j++){
+			for(var j = 0 ; j < arr.length ; j++){
 				
-				if(JSON.stringify(outArr[i]) === JSON.stringify(this[j])){
+				if(JSON.stringify(outArr[i]) === JSON.stringify(arr[j])){
 
 					counter++;
 				}
 			}
 		}
 	
-	if(counter === this.length){
+	if(counter === outArr.length){
 		return true;
 	}
 	
