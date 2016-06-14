@@ -16,7 +16,6 @@
 * rockPaperScissors(5); // => [['rock', 'rock', 'rock', 'rock', 'rock'], etc...]
 *
 */
-
 var rockPaperScissors = function() {
 	var resultarr=[];
 	var rock ="rock";
@@ -45,4 +44,3 @@ var rockPaperScissors = function() {
 	else if ( rock === "rock" || paper === "paper"|| scissors === "scissors")
 	return rockPaperScissors();
 	}
-};
