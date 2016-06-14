@@ -18,5 +18,28 @@
 */
 
 var rockPaperScissors = function() {
+	var arr = [];
+	var arr2 = [];
+	var no1 = "rock";
+	var no2 = "paper";
+	var no3 = "scissors";
+	for (var i = 0; i < 3; i++) {
+		arr2[0]=no1;
+		arr2[1]=no2;
+		arr2.[3]=no3;
+		if(arr.indexOf(arr2) === -1){
+			
+		}
+		}	
+
+
+		arr.push(arr2);
+
+	
+	
+	if(arr.length >= 27){return arr;}
+	rockPaperScissors();
+
+
   // fill me out!
 };
