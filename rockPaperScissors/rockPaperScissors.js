@@ -17,6 +17,25 @@
 *
 */
 
-var rockPaperScissors = function() {
-  // fill me out!
+var rockPaperScissors = function(n) {
+	var returnArray = [];
+	var arr = [];
+	var rock = "rock";
+	var paper = "paper";
+	var scissors = "scissors";
+	for (var i = 0; i < 3; i++) {
+		for (var j = 0; j < n; j++) {
+			if(i === 0)
+				arr.push(rock);
+			if(i === 1)
+				arr.push(paper);
+			if(i === 2)
+				arr.push(scissors);
+		}
+		returnArray.push(arr);
+		arr = [];
+	}
+	return returnArray;
+
+
 };
