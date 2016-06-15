@@ -38,13 +38,13 @@ var rockPaperScissors = function() {
   //var theBigArrayDimention  = 729;
   for (var i = 0; i < types1.length; i++) {
   	for (var j = 0; j<types2.length; j++){
-  		for (var i = 0; var k < types3.length; i++) {
+  		for (var k = 0; k < types3.length; i++) {
   		singlePosibility.push(types1[i]);
   		singlePosibility.push(types2[j]);
   		singlePosibility.push(types3[k]);
   	}
-  	console.log(singlePosibility);
-  	allPossibilities.push(singlePosibility);
+  	//console.log(singlePosibility);
+  	//allPossibilities.push(singlePosibility);
 //  	  	singlePosibility = [];
   }
 }
