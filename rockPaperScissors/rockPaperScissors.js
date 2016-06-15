@@ -16,18 +16,32 @@
 * rockPaperScissors(5); // => [['rock', 'rock', 'rock', 'rock', 'rock'], etc...]
 *
 */
-
 var rockPaperScissors = function() {
-	var newArray=[];
-	var DadArray=["paper","scissors","rock"];
-	var array=[];
-	for(var i=0; i<3; i++){
-		for(var j=0; j<3; j++){
-			for(var k=0; k<3; k++){
-				array.push(DadArray[i], DadArray[j], DadArray[k]);
-				newArray.push(array);
-			}//end of 3rd for 
-		}// end of 2nd for
-	}//end of 1st for
-  	return newArray;
+  var choices = ['rock','paper','scissors'];
+  var result = [];
+  for (var i = 0; i < choices.length; i++) {
+    for (var j = 0; j < choices.length; j++) {
+      for (var k = 0; k < choices.length; k++) {
+        result.push([choices[i],choices[j],choices[k]]);
+      }
+    }
+  };
+  return result;
+};
+
+var rockPaperScissors = function(num) {
+  var choices = ['rock','paper','scissors'];
+  var result = [];
+  
+  var iterate = function(arr){
+    if(arr.length === num){
+      result.push(arr);
+      return;
+    }
+    for (var i = 0; i < choices.length; i++) {
+      iterate(arr.concat(choices[i]));
+    };
+  }
+  iterate([]);
+  return result;
 };
