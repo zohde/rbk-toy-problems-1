@@ -41,28 +41,28 @@ function randInt() {
 }
 
 var rockPaperScissors = function() {
-  var game = [];
-  var seq = [];
-console.log(seq.length );
-  while(seq.length < 27){
+  var gameOfThree = [];
+  var allSolution = [];
+
+  while(allSolution.length <27){
   	var shoot = randInt();
   	
   	if(shoot === 0){
-  		game.push("rock");
+  		gameOfThree.push("rock");
   	}else if(shoot === 1){
-  		game.push("paper");
+  		gameOfThree.push("paper");
   	}else{
-  		game.push("scissors");
+  		gameOfThree.push("scissors");
   	}
   	
-  	if(game.length>2){
-  		if(!game.isSubsetOf(seq)){
-  			seq.push(game);
+  	if(gameOfThree.length>2){
+  		if(!gameOfThree.isSubsetOf(allSolution)){
+  			allSolution.push(gameOfThree);
   		}
-  		game=[];
+  		gameOfThree=[];
   	}
   }
-    return seq;
+    return allSolution;
 };
 
 
