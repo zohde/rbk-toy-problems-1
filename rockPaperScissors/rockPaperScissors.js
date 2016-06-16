@@ -30,11 +30,11 @@ Array.prototype.isSubsetOf = function (arr) {
 	return flag>= this.length ? true : false;
 }
 
-var rockPaperScissors = function() {
-	var x = 27;
+var rockPaperScissors = function(n) {
   var result = [];
-  while (x>0){
-  var onegame=[];
+  var x = Math.pow(3,n);
+  while (result.length<x){
+  	var onegame=[];
 	  for (var i=0; i<3;i++){
 		  var rand= random(3);
 			  if (rand ===1){
@@ -47,9 +47,23 @@ var rockPaperScissors = function() {
 	}
 	if (onegame.isSubsetOf(result) === false){
 		result.push(onegame);
-		x--;
 		}
 	}
 
   return result
+};
+
+
+// This is Pavel solution for the problem 
+var rockPaperScissors2 = function() {
+  var choices = ['rock','paper','scissors'];
+  var result = [];
+  for (var i = 0; i < choices.length; i++) {
+    for (var j = 0; j < choices.length; j++) {
+      for (var k = 0; k < choices.length; k++) {
+        result.push([choices[i],choices[j],choices[k]]);
+      }
+    }
+  };
+  return result;
 };
