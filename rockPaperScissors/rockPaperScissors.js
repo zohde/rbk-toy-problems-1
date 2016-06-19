@@ -34,4 +34,3 @@ var rockPaperScissors = function() {
 	}
 	return solutions;
 };
-

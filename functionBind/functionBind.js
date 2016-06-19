@@ -11,14 +11,21 @@
  // boundShout(); // alerts 'alice'
  // boundShout = bind(alice.shout, {name: 'bob'});
  // boundShout(); // alerts 'bob'
- //  example 2:
+ // //  example 2:
  //  var func = function(a, b){ return a + b };
  // var boundFunc = bind(func, null, 'foo');
  // var result = boundFunc('bar');
  // result === 'foobar'; // true
 
 
-var bind = function(func, context) {
+var bind = function(func, context, ...args) {
+
+	return function (){
+		for (var key in arguments){
+			args[args.length+parseFloat(key)] = arguments[parseFloat(key)	]
+		}
+		return func.apply(context, args);
+	}	
 };
 
  // * Function.prototype.bind:
@@ -46,4 +53,5 @@ var bind = function(func, context) {
 
 
 Function.prototype.bind = function(a, args1, args2) {
+	
 };
