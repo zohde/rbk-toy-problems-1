@@ -21,14 +21,13 @@ var rockPaperScissors = function() {
 	//var n=3;
 	var result=[];
 	var items=["rock", "paper", "scissors"];
-	//var count=(n+r-1)/(n-1)*r
+	//var count=(n+r-1)!/(n-1)!*r!
 
 	for(var i=0 ; i<=27 ; i++){
 	var game="";
-		for (var i=0 ; i<3 ; i++){
+		for (var i=0 ; i<items.length ; i++){
 			var item= items[Math.floor(Math.random()*items.length)];
 			game=game+ " " + item;
-			console.log(game);
 	}
 		if(result.indexOf(game)<=-1){
 		result.push(game.split(" "));
