@@ -54,4 +54,3 @@ var rockPaperScissors = function(n) {
 	}
 	return result
 }
-
