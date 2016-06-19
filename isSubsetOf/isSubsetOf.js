@@ -23,8 +23,6 @@
 */
 
 Array.prototype.isSubsetOf = function (arr) {
-
-
 	//var outArr = this;
 	var counter = 0;
 
@@ -37,7 +35,6 @@ Array.prototype.isSubsetOf = function (arr) {
 				}
 			}
 		}
-	
 	if(counter === this.length){
 		return true;
 	}
