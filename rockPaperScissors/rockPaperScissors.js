@@ -1,3 +1,4 @@
+
 /*
 * Write a function that generates every sequence of throws a single
 * player could throw over a three-round game of rock-paper-scissors.
@@ -17,6 +18,5 @@
 *
 */
 
-var rockPaperScissors = function() {
-  // fill me out!
+var rockPaperScissors = function(n) {
 };

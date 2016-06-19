@@ -38,3 +38,5 @@ Array.prototype.isSubsetOf = function (arr) {
 		return false;
       }
   };
+}
+
