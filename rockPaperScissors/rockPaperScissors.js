@@ -18,22 +18,35 @@
 */
 
 var rockPaperScissors = function() {
-	var game=["rock", "paper", "scissors"]
-	var newGame=[];
-	var all=[]
-	for (var i = 0; i < game.length; i++) {
-		newGame.push(game[i])
-		for (var i = 0; i < game.length; i++) {
-			newGame.push(game[i])
-			for (var i = 0; i < game.length; i++) {
-				newGame.push(game[i])
-				all.push(newGame);
+	var choices=["rock", "paper", "scissors"]
+	var result=[];
+	for (var i = 0; i < choices.length; i++) {
+		for (var j = 0; j < choices.length; j++) {
+			for (var k = 0; k < choices.length; k++) {
+				result.push([choices[i],choices[j],choices[k]])
+				
 			};
 		};
-		
 	};
 
 	
-	return all;
+	return result;
   // fill me out!
 };
+
+var rockPaperScissorsAdvanced=function(num){
+	var choices = ['rock','paper','scissors'];
+	var result = [];
+  
+	var iterate = function(arr){
+		if(arr.length === num){
+		  result.push(arr);
+		  return;
+		}
+		for (var i = 0; i < choices.length; i++) {
+		  iterate(arr.concat(choices[i]));
+		};
+	}
+	iterate([]);
+	return result;
+}

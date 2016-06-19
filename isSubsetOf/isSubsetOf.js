@@ -22,16 +22,47 @@
  * Extra credit: Make the method work for arrays that contain objects and/or arrays as elements.
 */
 
-Array.prototype.isSubsetOf = function (arr) {
-	var result=0;
-	for(var i=0; i<arr.length; i++){
-		if(arr.indexOf(this[i])>-1){
-			result++;
-		}
+// Refactor (rewrite) `makePhone` and `makeSmartPhone` to use pseudo classical inheritance
+// They should have exactly the same methods as the objects returned from the
+// original maker functions except in pseudo classical style. ie., you should be
+// able to use your new functions like so to create new phone instances.
+//
+//   var myPhone = new Phone();
+//   var mySmartPhone = new SmartPhone();
+//
+
+
+// DO NOT MODIFY FUNCTIONS 'makePhone' AND 'makeSmartPhone'
+// USE THE CONSTRUCTOR FUNCTIONS LOCATED AT THE END OF THIS FILE
+
+var MakePhone = function(phoneNumber) {
+  this.phoneNumber : phoneNumber;
+};
+MakePhone.prototype.send = function(recipientPhoneNumber, message) {
+  return 'sending the message "'+ message +'" to the phone number ' + recipientPhoneNumber;
+  }
+
+var MakeSmartPhone = function(phoneNumber, email) {
+   MakeSmartPhone = new MakePhone(phoneNumber);
+  this.email = email;
+};
+MakeSmartPhone.prototype.send = function(recipientPhoneNumberOrEmail, message) {
+    if (typeof recipientPhoneNumberOrEmail === 'number'){
+      return oldSend(recipientPhoneNumberOrEmail, message);
+    } 
+    else {
+    	return 'sending the message "' + message + '" to email ' + recipientPhoneNumberOrEmail;
 	}
-	if(result===this.length){
-		return true;
-	} 
-	return false;
-	
 }
+
+// Start writing your functions below in pseudo classical inheritance
+
+var Phone = function(phoneNumber) {
+ Phone=new MakePhone(phoneNumber);
+};
+
+
+
+var SmartPhone = function(phoneNumber, email) {
+  SmartPhone= new SmartPhone(phoneNumber, email)
+};
