@@ -31,4 +31,22 @@ var rockPaperScissors = function() {
   
 };
 
+[0,1,2,3,4,5]
+if()
+var rockPaperScissors = function(n) {
+  var result=[];
+  var arr=["rock", "paper","scissors"];
 
+  if(n==0)
+  {
+  	result
+  }
+  return result;
+  for (var i = 0; i < arr.length; i++) {
+  	for(var j=0; j < arr.length ; j++){
+  		for (var k = 0; k < arr.length; k++) {
+  			result.push([arr[i],arr[j],arr[k]]);
+  		}
+  	}
+  }
+};
