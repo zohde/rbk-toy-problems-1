@@ -29,3 +29,20 @@ var rockPaperScissors = function() {
   }
   return solution;
 };
+
+// var rockPaperScissors = function(num) {
+//   var choices = ['rock','paper','scissors'];
+//   var result = [];
+  
+//   var iterate = function(arr){
+//     if(arr.length === num){
+//       result.push(arr);
+//       return;
+//     }
+//     for (var i = 0; i < choices.length; i++) {
+//       iterate(arr.concat(choices[i]));
+//     };
+//   }
+//   iterate([]);
+//   return result;
+// };
