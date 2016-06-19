@@ -25,20 +25,20 @@
 Array.prototype.isSubsetOf = function (arr) {
 
 
-	outArr = this;
+	//var outArr = this;
 	var counter = 0;
 
-		for(var i = 0 ; i < outArr.length ; i++){
+		for(var i = 0 ; i < this.length ; i++){
 			for(var j = 0 ; j < arr.length ; j++){
 				
-				if(JSON.stringify(outArr[i]) === JSON.stringify(arr[j])){
+				if(JSON.stringify(this[i]) === JSON.stringify(this[j])){
 
 					counter++;
 				}
 			}
 		}
 	
-	if(counter === outArr.length){
+	if(counter === this.length){
 		return true;
 	}
 	
