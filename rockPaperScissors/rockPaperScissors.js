@@ -49,4 +49,3 @@ var rockPaperScissors = function(num) {
   iterate([]);
   return result;
 };
-
