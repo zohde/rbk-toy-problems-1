@@ -17,30 +17,36 @@
 *
 */
 var rockPaperScissors = function() {
-	var resultarr=[];
-	var rock ="rock";
-	var scissors="scissors";
-	var paper="paper";
-	for(var i=0;i<resultarr.length;i++){
-		if( rock === "rock"){
-		resultarr.push(
-			["rock", "rock", "rock"],
-			["rock", "rock", "paper"],
-			["rock", "rock", "scissors"])
-		}
-  	}
-	else if (paper === "paper"){
-		resultarr.push(
-			["paper", "paper", "paper"],
-			["paper", "paper", "rock"],
-			["paper", "paper", "scissors"],)
-	}
-	else   { scissors === "scissors"
-		    resultarr.push(
-			["scissors", "scissors", "scissors"],
-			["scissors", "scissors", "rock"],
-			["scissors", "scissors", "scissors"])
-	}
-	else if ( rock === "rock" || paper === "paper"|| scissors === "scissors")
-	return rockPaperScissors();
-	}
+  var choices = ['rock','paper','scissors'];
+  var result = [];
+  for (var i = 0; i < choices.length; i++) {
+    for (var j = 0; j < choices.length; j++) {
+      for (var k = 0; k < choices.length; k++) {
+        result.push([choices[i],choices[j],choices[k]]);
+      }
+    }
+  };
+  return result;
+};
+
+
+
+var rockPaperScissors = function(num) {
+  var choices = ['rock','paper','scissors'];
+  var result = [];
+  
+  var iterate = function(arr){
+    if(arr.length === num){
+      result.push(arr);
+      return;
+    }
+
+    for (var i = 0; i < choices.length; i++) {
+      iterate(arr.concat(choices[i]));
+    };
+  }
+
+  iterate([]);
+  return result;
+};
+

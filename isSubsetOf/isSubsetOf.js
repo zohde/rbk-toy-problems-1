@@ -22,12 +22,10 @@
  
 
 Array.prototype.isSubsetOf = function (arr) {
-	for (var i = 0; i < arr.length; i++) {
-	for (var j = 0; i < this.length; j++) {
-		if(arr[i] === this.[j]){
-			return true;
+	for (var i = 0; i < this.length; i++) {
+		if(arr.indexOf(this[i]) === -1){
+			return false;
 		}
 	}
-	}
-	return false;
+	return true;
 }
