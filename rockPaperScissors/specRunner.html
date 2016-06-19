@@ -16,17 +16,17 @@
     </script>
 
     <!-- Load tests and helpers here -->
-    <script src="isSubsetOf.js"></script>
-    <script src="spec/isSubsetOf.js"></script>
+    <script src="rockPaperScissors.js"></script>
+    <script src="spec/rockPaperScissors.js"></script>
 
     <script>
       // Mocha expects a global onload var here and automagically executes it on pageload
       onload = function(){
         var runner = window.mochaPhantomJS ? mochaPhantomJS.run() : mocha.run();
         runner.on('end', function() {
-          if(!this.failures){
-            window.alert('MUMTEZ!!!!');
-          }
+          // if(!this.failures){
+          //   window.alert('MUMTEZ!!!!');
+          // }
         });
       };
     </script>

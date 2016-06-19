@@ -31,9 +31,53 @@ var rockPaperScissors = function() {
   		}
   	}
   }
-
   return solution;
 };
+
+var rockPaperScissors2 = function(n) {
+  var solution = [];
+  var choices = ['rock','paper','scissors'];
+  var findAll = function(arr){
+    if(arr.length === n){
+      solution.push(arr);
+      return;
+    }
+    for(var i = 0; i < choices.length ; i++){
+      findAll(arr.concat(choices[i]));
+    }
+  }
+  findAll([]);
+  return solution;
+};
+// WHAT IF WE DID A FOR LOOP FOR THE THREE COLUMNS
+// NOW WE WANT A FUNCTION THAT WOULD WORK SWTICH COLUMN 3 TIMES 
+// JUST LIKE [0,0,0][0,0,1][0,0,2];
+// WHAT WOULD OUR EDGE CASE BE TO LET THAT INTO RECURSIVE
+// IF REACHED THE END OF ARRAY , THEN SEND TWO PARAMETERS ON THE RIGHT STATE
+// AND WORK ON THE LOOP CHANGING YOU 
+// FOR EXAMPLE IF WE ENTERED THE LOOP , THE i HAS A DECISION TREE'
+// SO IT WOULD GO FOR A RECURSIVE SENDING IT A 0 PARAMETER
+// NOW IF WE WENT TO THE SECOND COLUMN , ALSO HAVE A DECISION TREE;
+// LET THAT TOO INTO RECURSIVE AND NOW WE WOULD REACH THE THIRD COLUMN
+// THAT CANNOT GET INTO A RECURSIVE SO IT WOULD RUN THREE TIMES 
+// CHANGING EACH OF X Y AND Z ;
+// NOW ONCE WE GO BACK STEP , GOING ON TO I = 1; WE WOULD HAVE A DECISION TREE ;
+// WHICH WOULD LET US AGAIN TO THREE TIMES ENTERING THE FOR LOOP WITH THREE DIFFERENT VALUES;
+// AND THAT WOULD GO TILL THE END AND WE WILL GET THE RIGHT NUMBER OF POSSIBILITIES.
+// WOHOOO , AND THAT WOULD BE EASILY TRANSLATED INTO CODE RIGHT NOW . I GUESS NOT .
+
+
+
+
+
+
+
+
+
+
+
+
+
 // we have only three choices (Rock) or (Paper) or (Scissors)
 // lets assume they are 1 2 3 
 // we will have  a large array that holds the possibilities
