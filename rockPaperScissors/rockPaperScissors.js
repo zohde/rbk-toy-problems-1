@@ -16,21 +16,31 @@
 * rockPaperScissors(5); // => [['rock', 'rock', 'rock', 'rock', 'rock'], etc...]
 *
 */
-var newArr = [];
-
 var rockPaperScissors = function() {
+ var newArr = [];
   var arr = ["rock","paper","scissors"]
-  for (var i = 0; i < arr.length; i++) {
-  	for (var i = 0; i < arr.length; i++) {
-  		for (var i = 0; i < arr.length; i++) {
-  	if(newArr.length===27){
-  		return newArr;
-  	}
-  	newArr.push(arr[i])
-  
-  			
-  		}
-  	}
-  }
+    for (var i = 0; i < arr.length; i++) {
+      for (var j = 0; j < arr.length; j++) {
+    		for (var k = 0; k < arr.length; k++) {
+          newArr.push([arr[i],arr[j],arr[k]])
+        }	
+      }
+    }
+    return newArr;
+};
 
+var rockPaperScissors = function(num) {
+  var choices = ['rock','paper','scissors'];
+  var result = [];
+  var iterate = function(arr){
+    if(arr.length === num){
+      result.push(arr);
+      return;
+    }
+    for (var i = 0; i < choices.length; i++) {
+      iterate(arr.concat(choices[i]));
+    };
+  }
+  iterate([]);
+  return result;
 };

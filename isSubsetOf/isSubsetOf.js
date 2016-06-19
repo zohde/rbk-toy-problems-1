@@ -23,14 +23,10 @@
 */
 
 Array.prototype.isSubsetOf = function (arr) {
-	
 	for (var i = 0; i < this.length; i++) {
-		if(arr[i].indexOf(this[i])=== -1){
+		if(arr.indexOf(this[i])=== -1){
 			return false;
-
 		}
-		
 	}
-		 return true;
-
+ return true;
 }
