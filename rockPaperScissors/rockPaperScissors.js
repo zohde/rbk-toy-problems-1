@@ -36,4 +36,3 @@ var rockPaperScissors = function() {
    	}
 	return arr;
 };
-
