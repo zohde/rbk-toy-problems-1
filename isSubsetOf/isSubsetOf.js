@@ -23,6 +23,7 @@
 */
 
 Array.prototype.isSubsetOf = function (arr) {
+
 	var v=[];
 	for(var i=0;i<this.length;i++){
 		v.push(arr.indexOf(this[i]));
@@ -34,3 +35,6 @@ Array.prototype.isSubsetOf = function (arr) {
 	return false;
 
 	}
+
+}
+
