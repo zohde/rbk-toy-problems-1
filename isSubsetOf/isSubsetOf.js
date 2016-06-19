@@ -31,3 +31,16 @@ Array.prototype.isSubsetOf = function (arr) {
   return true;
 
 }
+function longestRun(string){
+     var counter=0;
+     var freq=[];
+	for (var i=0;i<sting.length;i++){
+		for (var j=i;j<string.length;j++){
+			if (string[i]===string[j]){
+				counter++;
+				
+			}	
+		}
+      freq.push(string[i],counter);
+	}
+}
