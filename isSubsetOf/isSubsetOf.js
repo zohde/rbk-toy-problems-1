@@ -21,9 +21,7 @@
 /*
  * Extra credit: Make the method work for arrays that contain objects and/or arrays as elements.
 */
-// var Array = function (){
 
-// }
 
 Array.prototype.isSubsetOf = function (arr) {
 	for(var i=0;i<this.length;i++){
@@ -48,3 +46,4 @@ Array.prototype.isSubsetOf = function (arr) {
 // 	}
 // 	return true;
 // }
+
