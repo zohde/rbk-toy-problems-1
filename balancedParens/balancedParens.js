@@ -27,20 +27,27 @@
  var balancedParens = function (input) {
   var left=[];
   var right=[];
-  for (var i = 0; i < input.length; i++) {
-  	if(input[i] === '(' || input[i] === '{' || input[i]==='[')
-  		left.push(input[i]);  	
-  else if (input[i]===')' || input[i] === '}' || input[i]===']')
-  	right.push(input[i])
-  }
-  for (var i = 0; i < left.length; i++) {
-  	for (var j = right.length - 1; j >= 0; j--) {
-  		if(left.length !== right.length){
+  if (input.indexOf(')')< input.indexOf('('))
+  	return false;
+	  else {
+	  for (var i = 0; i < input.length; i++) {
+	  	if(input[i] === '(' || input[i] === '{' || input[i]==='['){
+	  		left.push(input[i]);  	
+	  	}
+	  else if (input[i]===')' || input[i] === '}' || input[i]===']')
+	  	right.push(input[i])
+	  }
+	}
+   if(left.length !== right.length)
   			return false;
-  		}
-  		else if((right[j] === '}' && left[i] === '{') ||(right[j] === ')' && left[i] === '(') ||(right[j] === ']' && left[i] === '['))
-  			return true;
-  		return false;
-  	}
-  }
+  		else {
+			  for (var i = 0; i < left.length; i++) {
+			  	// for (var j = right.length - 1; j >= 0; j--){
+			  		for (var j = 0; j < right.length; j++) {
+			  	    if((right[j] === '}' && left[i] === '{') ||(right[j] === ')' && left[i] === '(') ||(right[j] === ']' && left[i] === '['))
+			  			return true;
+			  		return false;
+			  	}
+			  }
+			}
  };
