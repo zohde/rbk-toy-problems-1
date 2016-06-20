@@ -19,6 +19,7 @@
 /*
  * Extra credit: Make the method work for arrays that contain objects and/or arrays as elements.
 */
+
  // * var a = ['commit','push'] // this
  // * a.isSubsetOf(['commit','rebase','push','blame']) // true
 // arr = ['commit','rebase','push','blame']
@@ -32,5 +33,9 @@ Array.prototype.isSubsetOf = function (arr) {
 
 return true
 
+
+
+
+Array.prototype.isSubsetOf = function (arr) {
 
 }
