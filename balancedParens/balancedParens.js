@@ -48,5 +48,4 @@
  } else {
  	return false;
  }
- 
  };
