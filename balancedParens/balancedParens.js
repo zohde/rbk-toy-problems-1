@@ -31,9 +31,9 @@
 	var counterfor4 =0;
 	var counterfor5 =0;
 	var counterfor6 =0;
- 	if(input.length%2===1){
- 		return false;
- 	}
+ 	// if(input.length%2===1){
+ 	// 	return false;
+ 	// }
   for (var i = 0; i < input.length; i++) {
   	if(input[i]==='{'){
   		counterfor3++
