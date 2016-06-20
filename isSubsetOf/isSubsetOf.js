@@ -19,6 +19,7 @@
 /*
  * Extra credit: Make the method work for arrays that contain objects and/or arrays as elements.
 */
+<<<<<<< HEAD
  
 Array.prototype.isSubsetOf = function (arr) {
     uniqueArray=[];
@@ -56,3 +57,8 @@ Array.prototype.isSubsetOf = function (arr) {
  // }
  // }
  // return true;
+=======
+
+Array.prototype.isSubsetOf = function (arr) {
+}
+>>>>>>> 694e90f1ecd5d5a4143bb5d21c59aadcf8b85a40
