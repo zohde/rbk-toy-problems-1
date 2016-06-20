@@ -35,18 +35,20 @@ var check=function(index1,index2){
    var counter=0;
    if(str.length % 2 !== 0){
    		return false;
-   }else
+   }else{
+ var length=str.length-1;
    for(var i=0; i<str.length/2 ; i++){
-	   	var length=str.length-1;
 	   		var value=check(str[i],str[length]);
 	   		if(value){
 	   			length--;
 	   		}
-	   		else counter++;
+	   		else
+	   			counter++;
+   	}
    }
    if(counter >= 1 ){  // it means i have false cases
 	   for (var i = 0; i < str.length; i++) {
-	    	var value=check(str[i],str[i++]);
+	    	var value=check(str[i],str[++i]);
 	    	if(value === false)
 	    		return false;
 	  	 	}
