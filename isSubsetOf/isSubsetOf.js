@@ -23,6 +23,7 @@
 */
 
 Array.prototype.isSubsetOf = function (arr) {
+<<<<<<< HEAD
 	//this = ['commit','push']
 	//arr = ['commit','rebase','push','blame']
 
@@ -38,4 +39,6 @@ Array.prototype.isSubsetOf = function (arr) {
 
 	}
 	return sub;
+=======
+>>>>>>> 694e90f1ecd5d5a4143bb5d21c59aadcf8b85a40
 }
