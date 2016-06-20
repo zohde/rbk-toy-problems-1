@@ -42,8 +42,8 @@
   			return false;
   		else {
 			  for (var i = 0; i < left.length; i++) {
-			  	// for (var j = right.length - 1; j >= 0; j--){
-			  		for (var j = 0; j < right.length; j++) {
+			  	for (var j = right.length - 1; j >= 0; j--){
+			  		// for (var j = 0; j < right.length; j++) {
 			  	    if((right[j] === '}' && left[i] === '{') ||(right[j] === ')' && left[i] === '(') ||(right[j] === ']' && left[i] === '['))
 			  			return true;
 			  		return false;
