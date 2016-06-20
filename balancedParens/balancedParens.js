@@ -25,5 +25,22 @@
  */
 
  var balancedParens = function (input) {
-   // write your code hre
+ 	var balance = function (str1){ //strlast as a variable.
+ 		var str1 = input.split('');
+        console.log(str1);
+ 		// var strlast = input.split('');
+   //      console.log(strlast);
+        for(i=0; i < str1[i].length; i++){
+	 		if(str1[i].length === '(' && str1[i].length -1 === ')'){
+	 			return true;
+ 		}
+
+ 		if (str1[i].length === '(' || str1[i].length -1 === ')'){
+ 			return true;
+        	} else {
+        		return false;
+        	}
+ 		}
+ 	} 
+ 	return balance(input);
  };
