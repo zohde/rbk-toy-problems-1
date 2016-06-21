@@ -30,4 +30,21 @@ var commonCharacters = function(string1, string2) {
 };
 
 
+var commonCharacters2 = function() {
+	
+	
+	var results=[] ;
+	 for (var i = 1; i < arguments.length; i++) {
+	 	for (var j = 0; j < arguments[0].length; j++) {
+	 		 
+	 			if(arguments[0].indexOf(arguments[i][j])  !== -1) {
+
+	 			
+	 				results.push(arguments[i][j])} ;
+	 			}
+	 	}
+	 
+	
+ return results ;
+};
 
