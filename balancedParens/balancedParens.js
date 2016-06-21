@@ -26,7 +26,7 @@
 
  var balancedParens = function (input) {
  	var counterfor1 =0;
-	var counterfor2 = 0;
+	var counterfor2 =0;
 	var counterfor3 =0;
 	var counterfor4 =0;
 	var counterfor5 =0;
