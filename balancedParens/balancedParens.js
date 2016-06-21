@@ -63,11 +63,13 @@
    		else{
 			for (var i=0; i<input.length; i++){
 	   			var l = arrBrackets.length;
-	   			if (input[i]==='('&&l%2===0){
-	   				arrBrackets.push(input[i]);
+	   			if (input[i]==='('){
+	   				if (l%2===0){
+	   					arrBrackets.push(input[i]);
+	   				}
 	   				counterL++
 	   			}
-	   			else if(input[i]!==')'){
+	   			else if(input[i]===')'){
 	   				if(l%2>0){
 	   					arrBrackets.push(input[i]);
 	   				};

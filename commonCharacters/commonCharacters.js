@@ -11,6 +11,22 @@
  */
 
 //Works for any number of input strings:
-var commonCharacters = function(string1, string2) {
+var commonCharacters = function(string1, ...args) {
+  var retString = ""
+  var compChar;
+  var flag = true;
+  var string2;
+  var strings = args.map(function(e){return e});
   
+  for (var i=0; i<string1.length; i++){
+	compChar = string1[i]
+	for (var j=0; j<strings.length; j++)
+		if(strings[j].indexOf(compChar)===-1 || strings[j].indexOf(compChar.toLowerCase()) === -1){
+			flag = false;
+		}
+  	if(flag && (retString.indexOf(compChar)===-1||retString.indexOf(compChar.toLowerCase())===-1)){
+  		retString = retString+compChar.toLowerCase();
+  	}
+  }
+  return retString;
 };
