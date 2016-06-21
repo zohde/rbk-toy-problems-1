@@ -46,4 +46,14 @@ var bind = function(func, context) {
 
 
 Function.prototype.bind = function(a, args1, args2) {
+
 };
+
+
+// function bind(func, fixThis) { 
+//   return function() {
+//     return func.apply(fixThis, arguments)
+
+  
+
+
