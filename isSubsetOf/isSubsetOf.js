@@ -23,4 +23,20 @@
 */
 
 Array.prototype.isSubsetOf = function (arr) {
+	var aRR= [];
+	for (var i=0; i<arr.length; i++){
+		counter=0;
+		for(var j=0; j<aRR.length; j++){
+			
+			if(arr[i]===aRR[j]){
+				counter++;
+			}
+		}
+		if(counter!==0){
+			return true;
+		}
+		return false;
+      }
+  };
 }
+

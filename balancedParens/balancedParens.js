@@ -25,5 +25,22 @@
  */
 
  var balancedParens = function (input) {
-   // write your code hre
+ 	var counter= 0;
+ 	var counter1=0;
+ 	var ARR= input.split("");
+ 	for (var i=0; i<ARR.length; i++){
+ 		if (ARR[i]==="(" || ARR[i]==="[" || ARR[i]==="{"){
+ 			counter++;
+ 		}
+    for (var j=0; j<ARR.length; j++){
+        if(ARR[j]===")"|| ARR[j]==="]" || ARR[j]==="}"){
+        	counter1++;
+        }
+      }  
+        if (counter=== counter1 || counter%2===0 && counter1%2===0){
+        	return true;
+        }
+
+ 	}
+ 	return false;
  };
