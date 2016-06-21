@@ -23,4 +23,18 @@
 */
 
 Array.prototype.isSubsetOf = function (arr) {
+	var stop = false;
+	for (var i=0; i<this.length; i++){
+		for (var j=0; j<arr.length; j++){
+			if (this[i]===arr[j]){
+				stop = true;
+			}
+		}
+		if (!stop){
+			return stop;
+		}else if(i!== this.length-1){
+			stop = false;
+		}
+	}
+	return stop;
 }
