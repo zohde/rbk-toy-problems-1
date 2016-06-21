@@ -18,7 +18,7 @@ var commonCharacters = function(){
 	for (var i = 0; i < firstArg.length; i++) {
 		for (var k = 0; k < restArgs.length; k++) {
 			if (restArgs[k].includes(firstArg[i])){
-				if(!result.includes(firstArg[i]))
+				if(!result.includes(firstArg[i]) && firstArg[i]!== " ")
 				result+= firstArg[i];
 			}
 		}
