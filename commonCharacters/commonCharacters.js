@@ -11,6 +11,26 @@
  */
 
 //Works for any number of input strings:
+
 var commonCharacters = function(string1, string2) {
-  
+ 
+  var str1Array = string1.split('');
+  var str2Array = string2.split('');
+  var commonCharObj = {};
+  var commonCharArr = [];
+  var output = '';
+
+  for(var i = 0; i < str1Array.length; i++){
+  	for(var j = 0; j < str2Array.length; j++){
+  		if(str1Array[i] === str2Array[j]){
+  			commonCharObj[str1Array[i]] = str1Array[i];
+  		}
+  	}
+  }
+
+  commonCharArr = Object.keys(commonCharObj);
+  output = commonCharArr.join('')
+
+  return output;
 };
+

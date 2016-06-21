@@ -23,8 +23,7 @@
  *
  *
  */
-
- var balancedParens = function (input) {
+  var balancedParens = function (input) {
    // write your code hre
 
    var br1_1 = 0; //(
@@ -65,8 +64,9 @@
    			br3_2++;
    		}
    	}
+
    } else {
-   	
+
    	return false;
    }
 
@@ -85,8 +85,138 @@
    } else {
    	flag = false;
    }
-   
+
+   if(flag){
+   	for(var i = 0; i < br1_1; i++){
+   		if(parArray.indexOf('(') < parArray.indexOf(')')){
+   			parArray.splice(parArray.indexOf('('),1);
+   			parArray.splice(parArray.indexOf(')'),1);
+   			flag = true;
+   		} else {
+   			flag = false;
+   		}
+   	}
+
+   	for(var i = 0; i < br2_1; i++){
+   		if(parArray.indexOf('[') < parArray.indexOf(']')){
+   			parArray.splice(parArray.indexOf('['),1);
+   			parArray.splice(parArray.indexOf(']'),1);
+   			flag = true;
+   		} else {
+   			flag = false;
+   		}
+   	}
+
+   	for(var i = 0; i < br3_1; i++){
+   		if(parArray.indexOf('{') < parArray.indexOf('}')){
+   			parArray.splice(parArray.indexOf('{'),1);
+   			parArray.splice(parArray.indexOf('}'),1);
+   			flag = true;
+   		} else {
+   			flag = false;
+   		}
+   	}
+   }
 
    
    return flag;
 };
+
+//  var balancedParens = function (input) {
+//    // write your code hre
+
+//    var br1_1 = 0; //(
+//    var br1_2 = 0; //)
+//    var br2_1 = 0; //[
+//    var br2_2 = 0; //]
+//    var br3_1 = 0; //{
+//    var br3_2 = 0; //}
+//    var flag = false;
+
+//    var inputArray = input.split('');
+//    var parArray = [];
+//    for(var i = 0; i < inputArray.length; i++){
+//    	if(inputArray[i] === '(' || inputArray[i] === '{' || inputArray[i] ===  '[' || inputArray[i] === ']' || inputArray[i] === '}'|| inputArray[i] === ')'){
+//    		parArray.push(inputArray[i]);
+//    	}
+//    }
+//    if((parArray.length/2)% 1 === 0){
+
+//    	for(var i = 0; i < parArray.length; i++){
+   		
+//    		if(parArray[i] === '('){
+//    			br1_1++;
+//    		}
+//    		if(parArray[i] === ')'){
+//    			br1_2++;
+//    		}
+//    		if(parArray[i] === '['){
+//    			br2_1++;
+//    		}
+//    		if(parArray[i] === ']'){
+//    			br2_2++;
+//    		}
+//    		if(parArray[i] === '{'){
+//    			br3_1++;
+//    		}
+//    		if(parArray[i] === '}'){
+//    			br3_2++;
+//    		}
+//    	}
+
+//    } else {
+
+//    	return false;
+//    }
+
+//    if(br1_1 === br1_2){
+//    	flag = true;
+//    } else{
+//    	flag = false;
+//    }
+//    if(br2_1 === br2_2){
+//    	flag = true;
+//    } else{
+//    	flag = false;
+//    }
+//    if(br3_1 === br3_2){
+//    	flag = true;
+//    } else {
+//    	flag = false;
+//    }
+
+//    if(flag){
+//    	for(var i = 0; i < br1_1; i++){
+//    		if(parArray.indexOf('(') < parArray.indexOf(')')){
+//    			parArray.splice(parArray.indexOf('('),1);
+//    			parArray.splice(parArray.indexOf(')'),1);
+//    			flag = true;
+//    		} else {
+//    			flag = false;
+//    		}
+//    	}
+
+//    	for(var i = 0; i < br2_1; i++){
+//    		if(parArray.indexOf('[') < parArray.indexOf(']')){
+//    			parArray.splice(parArray.indexOf('['),1);
+//    			parArray.splice(parArray.indexOf(']'),1);
+//    			flag = true;
+//    		} else {
+//    			flag = false;
+//    		}
+//    	}
+
+//    	for(var i = 0; i < br3_1; i++){
+//    		if(parArray.indexOf('{') < parArray.indexOf('}')){
+//    			parArray.splice(parArray.indexOf('{'),1);
+//    			parArray.splice(parArray.indexOf('}'),1);
+//    			flag = true;
+//    		} else {
+//    			flag = false;
+//    		}
+//    	}
+//    }
+
+   
+//    return flag;
+// };
