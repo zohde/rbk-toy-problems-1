@@ -22,5 +22,17 @@
  * Extra credit: Make the method work for arrays that contain objects and/or arrays as elements.
 */
 
+
 Array.prototype.isSubsetOf = function (arr) {
+ var result = true;
+	var newArray = [];
+	for(var i=0; i<arr.length; i++){
+		newArray.push(JSON.stringify(arr[i]));
+	}//end of for 
+	
+
+	  for(var i=0; i<this.length; i++){
+		result = result && (newArray.indexOf(JSON.stringify(this[i])) !== -1);
+	  }//end of second for
+ return result;
 }
