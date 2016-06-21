@@ -18,5 +18,20 @@
 *
 */
 
-var rockPaperScissors = function(n) {
+var rockPaperScissors = function() {
+var choice =["rock","paper","scissors"];
+var result=[];
+
+for (var i=0;i<choice.length;i++){
+	for(var b=0;b<choice.length;b++){
+		for(var k=0;k<choice.length;k++){
+			result.push([].concat(choice[i], choice[b],choice[k]));
+
+		}
+
+	}
+}
+return JSON.stringify(result);
+
+  // fill me out!
 };

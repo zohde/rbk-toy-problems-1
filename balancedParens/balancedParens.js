@@ -24,6 +24,24 @@
  *
  */
 
- var balancedParens = function (input) {
+ var balancedParens = function (input,input2) {
    // write your code hre
+   if(input ==="("&&input2===")"){
+   	return true;
+   }
+   return false;
+}
+
+var balancedParens = function (input) {
+   var result =false
+   for (var i=0;i<input.length;i++){
+   	var fetch =input[i];
+   	if(!result){
+   		if(fetch ==="("&& fetch===")"){
+   			return true;
+   		}
+   		return false;
+   	}
+   
+   }
  };
