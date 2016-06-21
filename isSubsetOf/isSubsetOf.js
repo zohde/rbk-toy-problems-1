@@ -23,4 +23,22 @@
 */
 
 Array.prototype.isSubsetOf = function (arr) {
+<<<<<<< HEAD
+	//this = ['commit','push']
+	//arr = ['commit','rebase','push','blame']
+
+	var sub =false;
+	for(this.i=0;this.i<Array.length;this.i++){
+		for(var j=0;j<arr.length;j++){
+			if(arr[j]===Array[this.i]){
+				sub=true;
+			}
+
+		}
+		
+
+	}
+	return sub;
+=======
+>>>>>>> 694e90f1ecd5d5a4143bb5d21c59aadcf8b85a40
 }
