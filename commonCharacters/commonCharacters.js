@@ -32,6 +32,7 @@ var commonCharacters = function(string1, string2) {
 
 
 
+
 /*
 // create array of arguments.
 // make a for loop inside the arguments array
