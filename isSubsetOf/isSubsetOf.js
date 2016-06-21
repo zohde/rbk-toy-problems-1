@@ -23,4 +23,24 @@
 */
 
 Array.prototype.isSubsetOf = function (arr) {
+	var flag = 0;
+	for (var i = 0; i < this.length; i++) {
+		for (var j = 0; j < arr.length; j++) {
+			if (arr[j] === this[i]){
+				flag++;
+			}
+		}
+	}
+if (flag === arr.length){
+	return true;
+} else return false;
 }
+
+var MyArray = new Array;
+MyArray[0] = "a";
+MyArray[1] = "b";
+MyArray[2] = "c";
+
+MyArray.isSubsetOf(["a","b","c","d"]);
+}
+

@@ -26,4 +26,27 @@
 
  var balancedParens = function (input) {
    // write your code hre
+   
+   var paraOpen = "(";
+   var paraClose = ")";
+   var squareOpen = "[";
+   var squareClose = "]";
+   var curlyOpen = "{";
+   var curlyClose = "}";
+   var opening = 0;
+   var closing = 0;
+   if (input[0] === paraClose || input[0] === squareClose || input[0] === curlyClose) {return false;}
+   for (var i = 0; i < input.length; i++) {
+   	 if (input[i] === paraOpen || input[i] === squareOpen || input[i] === curlyOpen){
+   	 	opening ++;
+   	 } else if (input[i] === paraClose || input[i] === squareClose || input[i] === curlyClose){
+   	 	closing++
+   	 }
+   }
+ if (opening === closing) {
+ 	return true;
+ } else {
+ 	return false;
+ }
  };
+ 
