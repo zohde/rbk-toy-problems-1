@@ -29,7 +29,7 @@ var commonCharacters = function(string, ...args) {
 	}
 	
 	if(strings.length === 1){
-		return result
+		return result.join('')
 	}
 
 	return commonCharacters(result, strings.slice(1))
