@@ -24,3 +24,4 @@ var commonCharacters = function(string1, string2) {
 	}
   return common.join("")
 };
+// 
