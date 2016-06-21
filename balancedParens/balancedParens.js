@@ -33,17 +33,20 @@
  			if(array[i]==="("){
  				if(array[count]===")"||array[i+1]===")"){
  					result= true;	
- 				}	
+ 				}
+ 				return result;	
  			}
  			if(array[i]==="["){
  				if(array[count]==="]"||array[i+1]==="]"){
  					result= true;	
  				}	
+ 				return result;
  			}
  			if(array[i]==="{" ){
  				if(array[count]==="}"||array[i+1]==="}"){
  					result= true;	
- 				}	
+ 				}
+ 				return result;	
  			}
  			count--;
  		};
