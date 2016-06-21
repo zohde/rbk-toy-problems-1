@@ -4,8 +4,6 @@
  * array will contain objects or arrays as elements within them.
  *
  *
- * var a = ['commit','push']
- * a.isSubsetOf(['commit','rebase','push','blame']) // true
  *
  * NOTE: You should disregard duplicates in the set.
  *
@@ -22,5 +20,22 @@
  * Extra credit: Make the method work for arrays that contain objects and/or arrays as elements.
 */
 
+ // * var a = ['commit','push'] // this
+ // * a.isSubsetOf(['commit','rebase','push','blame']) // true
+// arr = ['commit','rebase','push','blame']
 Array.prototype.isSubsetOf = function (arr) {
+		for (var i =0; i<this.length; i++) {
+			if (arr.indexOf(this[i])=== -1){
+				return false; 
+			}
+			 
+		}
+
+return true
+
+
+
+
+Array.prototype.isSubsetOf = function (arr) {
+
 }

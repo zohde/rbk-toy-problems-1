@@ -25,5 +25,13 @@
  */
 
  var balancedParens = function (input) {
-   // write your code hre
+
+   // write your code here
+   for(var i=0; i<input.length; i++){
+   	if(input[i] === "(" && input[i+1]===")"){
+   			
+   	} else 
+   	return false;
+   }
+
  };
