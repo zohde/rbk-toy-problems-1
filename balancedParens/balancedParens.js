@@ -46,6 +46,11 @@
    return result;
  };
 
+var balancedParens = function (input) {
+	var result=false;
+	var arrayPar=input.split("");
+}
+
 
 //My tries for step 2:
 // var Other=function(input){
