@@ -16,7 +16,6 @@ var commonCharacters = function(string, ...args) {
 		args = args[0]
 	}
 	var result = []
-	console.log(args[0])
 	var strings = args.slice()
 	
 	for(var i = 0; i < string.length; i++){
@@ -28,7 +27,6 @@ var commonCharacters = function(string, ...args) {
 			}
 		}
 	}
-	console.log(strings, string)
 	
 	if(strings.length === 1){
 		return result
