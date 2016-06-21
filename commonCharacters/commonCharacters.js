@@ -1,0 +1,43 @@
+/**
+ * Write a function `commonCharacters(str1, str2)` which takes two strings as arguments and returns a
+ * string containing the characters found in both strings (without duplication), in the
+ * order that they appeared in `str1`. Remember to skip spaces and characters you
+ * have already encountered!
+ *
+ * Example: commonCharacters('acexivou', 'aegihobu')
+ * Returns: 'aeiou'
+ *
+ * Extra credit: Extend your function to handle more than two input strings.
+ */
+
+//Works for any number of input strings:
+var commonCharacters = function(string1, string2) {
+	var str1=string1.split('');
+	var str2=string2.split('');
+	var array=[];
+	var resutls="";
+
+	for (var i = 0; i < str1.length; i++) {
+		if(str2.indexOf(str1[i])!== -1 && array.indexOf(str1[i])=== -1){
+			array.push(str1[i]);
+			resutls=resutls+str1[i];
+		}
+
+	}
+	return resutls;
+};
+//advanced part
+
+var commonCharacters = function() {
+	var array=[];
+	var resutls="";
+	for (var i = 1; i < arguments.length; i++) {
+		for (var j = 0; j < arguments[0].length; j++) {
+			if( arguments[0].indexOf(arguments[i][j])!== -1 && array.indexOf(arguments[i][j])=== -1){
+			array.push(arguments[i][j]);
+			resutls=resutls+arguments[i][j];
+		}
+	}
+}	
+	return resutls;
+};
