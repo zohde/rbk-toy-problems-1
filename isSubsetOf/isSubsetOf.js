@@ -18,9 +18,59 @@
 */
 
 
+<<<<<<< HEAD
+// In order for our array to work on all type of array of arrays
+// Then we need to stringify our object or array .
+// By then we will create a new array , and push all elements in it .
+// then we will compare our array with using JSON.stringify in the subset of .
+
+
+
+Array.prototype.isSubsetOf = function (arr) {
+	var newArr = [];
+	for(var i = 0; i<arr.length; i++){
+		newArr.push(JSON.stringify(arr[i]))
+	}
+	for(var i = 0; i<this.length; i++){
+		if(newArr.indexOf(JSON.stringify(this[i])) === -1){
+			return false;
+		}
+	}
+	return true;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// Array.prototype.isSubsetOf = function (arr) {
+// 	var newArr  =[];
+// 	var boolean = true;
+// 	for(var i = 0; i < arr.length ; i++){
+// 		newArr.push(JSON.stringify(arr[i]));
+// 	}
+// 	for(var i = 0; i< this.length ; i++){
+// 		if(newArr.indexOf(JSON.stringify(this[i])) === -1){
+// 			return false;
+// 		}		
+// 	}
+// 	return boolean;
+// };
+
+
+
+=======
 /*
  * Extra credit: Make the method work for arrays that contain objects and/or arrays as elements.
 */
 
 Array.prototype.isSubsetOf = function (arr) {
 }
+>>>>>>> 694e90f1ecd5d5a4143bb5d21c59aadcf8b85a40
