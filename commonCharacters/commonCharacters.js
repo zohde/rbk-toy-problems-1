@@ -21,8 +21,10 @@ var commonCharacters = function(string1, ...args) {
   for (var i=0; i<string1.length; i++){
 	compChar = string1[i]
 	for (var j=0; j<strings.length; j++)
-		if(strings[j].indexOf(compChar)===-1 || strings[j].indexOf(compChar.toLowerCase()) === -1){
-			flag = false;
+		if(strings[j].indexOf(compChar)===-1){
+      if(strings[j].indexOf(compChar.toLowerCase())===-1){
+			 flag = false; 
+      }
 		}
   	if(flag && (retString.indexOf(compChar)===-1||retString.indexOf(compChar.toLowerCase())===-1)){
   		retString = retString+compChar.toLowerCase();
