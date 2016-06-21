@@ -25,5 +25,34 @@
  */
 
  var balancedParens = function (input) {
-   // write your code hre
- };
+  var arr = input.split("") ;
+  // debugger;
+  var open ="(" ;
+  var closed = ")"; 
+  var counterOpen = 0;
+  var counterClosed = 0
+ if(arr.length%2 ===0){
+  for (var i = 0; i < arr.length; i++) {
+  		if(arr[i] === open){
+			counterOpen++
+		}
+  		 else if(arr[i] === closed){
+  		 	counterClosed++
+  		 }
+  		
+  		
+  } 
+ 	if(counterClosed === counterOpen) {
+  		return true ;
+  	}
+ }
+  return false ;
+};
+
+
+
+
+
+
+
+
