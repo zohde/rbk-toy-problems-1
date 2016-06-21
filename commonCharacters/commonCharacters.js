@@ -12,5 +12,39 @@
 
 //Works for any number of input strings:
 var commonCharacters = function(string1, string2) {
+	var arr = [];
+	for (var i = 0; i < string1.length; i++) {
+		for (var j = 0; j < string2.length; j++) {
+			if(string1[i]=== string2[j]){
+				if(arr.indexOf(string1[i])===-1)
+				arr.push(string1[i])
+			}		
+		}
+			
+		
+	}
+	var str = arr.join();
+	return str;
+
   
 };
+
+// .............extra credit.................
+var commonCharacters2 = function(arguments){
+	var str = "";
+	var arr = [];
+	str = str.concat(arguments);
+	for (var i = 0; i < str.length; i++) {
+		for (var j = i+1; j < str.length; j++) {
+			if(str[i] === str[j]){
+				 if(arr.indexOf(str[i])=== -1){
+					arr.push(str[i])
+				
+				}
+			}
+		}
+	}
+	str2=arr.join();
+	return str2;
+
+}

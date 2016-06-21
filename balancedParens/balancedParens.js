@@ -24,9 +24,11 @@
  *
  */
  var balancedParens = function (input) {
+
  	var counterLeftP = 0;
  	var counterRightP =0;
- 	var quote = 0;
+ 
+ 	
  	for (var i = 0; i < input.length; i++) {
  		for (var j = i+1; j < input.length; j++) {
  			for (var z = j+1; z < input.length; z++) {
@@ -34,7 +36,7 @@
  				if(input[i]=== "(" ){
  					counterLeftP++;	
  				}
- 				if(input[j]==="'" && input[z]===")"){
+ 				if(input[j]==="'" && input[z]!=="'" && input[z]===")"){
  					counterLeftP--;
  				}
  			
