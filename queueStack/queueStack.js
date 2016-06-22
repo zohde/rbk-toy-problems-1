@@ -54,7 +54,7 @@
     	}
     }
    };
-   // should return the number of items in the queue
+  
    this.size = function(){
     return inbox.length+outbox.length;
    };
