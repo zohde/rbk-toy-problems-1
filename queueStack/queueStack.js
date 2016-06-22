@@ -40,8 +40,8 @@
      for (var i = 0; i < inbox.stack.length; i++) {
       outbox.stack.unshift(inbox.stack[i]);
      }
-     console.log(inbox.stack)
-     console.log(outbox.stack)
+     //console.log(inbox.stack)
+     //console.log(outbox.stack)
    };
 
    // called to remove an item from the `queue`
@@ -51,8 +51,8 @@
     for (var i = 0; i < outbox.stack.length; i++) {
       inbox.stack.unshift(outbox.stack[i])
     }
-    console.log(inbox.stack)
-    console.log(outbox.stack)
+    //console.log(inbox.stack)
+    //console.log(outbox.stack)
    };
 
    // should return the number of items in the queue
