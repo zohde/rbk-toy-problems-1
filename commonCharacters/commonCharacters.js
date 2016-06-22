@@ -25,18 +25,18 @@ var commonCharacters = function(string1, string2) {
 			}
 		}
 	}
+	commonChars = commonChars.join("");
 	return commonChars;
 };
 
 ///Extra
 var commonCharacters2 = function(string1, string2){
 	var strings = [];
-	var result = [];
+	var result = "";
 	for(var i=0 ; i<arguments.length ; i++)
-		strings.push(arguments[i].split(""));
+		strings.push(arguments[i]);
 	for(var i=0 ; i<strings.length ; i++){
-		result = commonCharacters(strings[i].join(""),result.join(""));
+		result = commonCharacters(strings[i],result);
 	}
-	//result = result.join("");
 	return result;
 };
