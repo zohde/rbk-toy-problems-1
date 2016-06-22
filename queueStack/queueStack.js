@@ -46,10 +46,9 @@
    // called to remove an item from the `queue`
    this.dequeue = function(){
      // TODO: implement `dequeue`
-     var length=inbox.size()-1;
+     
      for (var i = 0; i < inbox.size(); i++) {
-       outbox.push(inbox[length]);
-       length=length-1;
+       outbox.push(inbox.pop());
      }
       return outbox.pop();
    };
