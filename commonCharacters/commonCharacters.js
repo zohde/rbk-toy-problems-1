@@ -23,7 +23,7 @@ var commonCharacters = function(string1, string2){
 	}
 	for(var j=0;j<array.length-1;j++){
 		for(var k=0;k<array[j].length;k++){
-				if(array[j].indexOf(array[j+1][k])!==-1){
+				if(array[j].indexOf(array[j+1][k])!==-1 && result.indexOf(array[j+1][k])){
 					result.push(array[j+1][k]);
 			}
 		}
@@ -38,7 +38,7 @@ var commonCharacters = function(string1, string2) {
 	var arr=[];
 	var str="";
 	for(var i=0;i<array1.length;i++){
-		if(array2.indexOf(array1[i])!==-1){
+		if(array2.indexOf(array1[i])!==-1 && arr.indexOf(array1[i]===-1)){
 			arr.push(array1[i])
 		}
 
