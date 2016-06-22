@@ -15,14 +15,15 @@
 
 var commonCharacters = function() {
   var common=arguments[0].split("");
-  console.log(common);
+  //console.log(common);
     for (var y= 1; y< arguments.length; y++) {
-    	var arrsrt=arguments[y];
+    	var arrsrt=arguments[y].split("");
         for (var i = 0; i < common.length; i++) {
    	    if (arrsrt.indexOf(common[i])> -1){
    		   //if(common.indexOf(arguments[0][i])=== -1){
    		}else{
    			common.splice(i,1)
+   			i--;
    		}
 
    	  	  console.log(common);  
