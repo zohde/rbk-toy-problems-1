@@ -1,12 +1,4 @@
-/**
-  * Write a stack using your preferred instantiation pattern. Once you're done,
-  * implement a queue using two stacks.
-  */
-
- /**
-   * Stack Class
-   */
- var Stack = function() {
+var Stack = function() {
    this.stackArr =[];
    // add an item to the top of the stack
    this.push = function(input){
@@ -34,16 +26,17 @@
 
    // called to add an item to the `queue`
    this.enqueue = function(input){
-     // TODO: implement `enqueue`
+      inbox.push(input)
    };
 
    // called to remove an item from the `queue`
-   this.dequeue = function(input){
-     // TODO: implement `dequeue`
+   this.dequeue = function(){
+    outbox.push(inbox.pop())
+   return outbox.pop();
    };
 
    // should return the number of items in the queue
    this.size = function(){
-     // TODO: implement `size`
+      return inbox.stackArr.length+outbox.stackArr.length
    };
  };
