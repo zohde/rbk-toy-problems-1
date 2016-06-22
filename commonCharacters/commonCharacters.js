@@ -30,7 +30,7 @@ var commonCharacters = function(string1, string2) {
 };
 
 // .............extra credit.................
-var commonCharacters2 = function(arguments){
+var commonCharacters2 = function(){
 	var str = "";
 	var arr = [];
 	str = str.concat(arguments);
