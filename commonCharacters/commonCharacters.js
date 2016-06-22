@@ -11,6 +11,7 @@
  */
 
 //Works for any number of input strings:
+<<<<<<< HEAD
 // var commonCharacters = function(string1, string2) {
   
 //   var result = "";
@@ -115,3 +116,8 @@ var commonCharacters2 = function(string1,string2){
 // if our letter reaches till the ends of the argument
 // and still true; then we will add it to our result;
 // else its not true; 
+=======
+var commonCharacters = function(string1, string2) {
+  
+};
+>>>>>>> a506cfa3efd820b5f01a905a4fc47b7f98a2d111
