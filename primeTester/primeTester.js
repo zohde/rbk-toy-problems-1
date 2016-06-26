@@ -5,7 +5,13 @@
  */
 
 var primeTester = function(n) {
-  // to do
+  
+  for(var i = 2; i < n; i++){
+  	if(n % i === 0){
+  		return false
+  	}
+  }
+  return true;
 };
 
  /* Extra credit: Write a function that generates a list of all prime numbers
@@ -16,5 +22,49 @@ var primeTester = function(n) {
 
 
 var primeSieve = function(start, end) {
-  // to do
+  var array = []
+  var bool;
+  for(var i = start; i <= end; i++){
+  	  if(i === 1){
+  	  	array.push(1)
+  	  	array.push(2)
+  	  	i = i + 2
+  	  }
+  	  else if(i === 2){
+  	  	array.push(2)
+  	  	i++
+  	  }
+	  bool = true
+	  for(var j = 2; j < i; j++){
+	  	if(i % j === 0){
+	  		bool = false
+	  	}
+	  }
+	  if(bool){
+	  	array.push(i)
+	  }
+  }
+  return array
 };
+
+var primeSieveEra = function(start, end) {
+	var list = []
+	for(var i = 2; i <= end; i++){
+		list.push(true)
+	}
+	for(var j = 2; j <= Math.sqrt(end); j++){
+		if(list[j]){
+			for(var k = j*j; k <= end; k+=j){
+				list[k] = false
+			}
+		}
+	}
+	var array = []
+	for(var n = start; n <= end; n++){
+		if(list[n]){
+			array.push(n)
+		}
+	}
+	return array
+}
+
