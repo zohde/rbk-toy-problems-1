@@ -5,8 +5,17 @@
  */
 
 var primeTester = function(n) {
-  // to do
-};
+	for (var i = 2 ; i<=n ; i++) {
+		if(n===2||n===0){
+			return false;
+		}
+	else if( n%i===0){
+		return false;
+	}
+	}
+	return true;
+}
+
 
  /* Extra credit: Write a function that generates a list of all prime numbers
   * in a user-specified range (inclusive). If you're not quite sure where to start,
