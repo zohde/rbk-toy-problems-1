@@ -5,7 +5,12 @@
  */
 
 var primeTester = function(n) {
-  // to do
+  for (var i=n-1; i>1; i--){
+  	if (n%i === 0){
+  		return false;
+  	}
+  }
+  return true;
 };
 
  /* Extra credit: Write a function that generates a list of all prime numbers
@@ -14,7 +19,13 @@ var primeTester = function(n) {
   * saucy, check out the Sieve of Atkin.)
   */
 
-
 var primeSieve = function(start, end) {
-  // to do
+	var primeArr = []
+	for (i=start; i<=end; i++){
+		if(primeTester(i)){
+			primeArr.push(i);
+		}
+	}
+  console.log("prime numbers between " + start + " and " + end + " : " + primeArr)
+  return primeArr; 
 };
