@@ -4,8 +4,13 @@
  * a prime number, false if it's not.
  */
 
-var primeTester = function(n) {
-  // to do
+var primeTester = function(n){
+    for(var i=2; i<n ; i++){
+        if(n % i === 0){
+            return false;
+        }
+    }
+    return true;
 };
 
  /* Extra credit: Write a function that generates a list of all prime numbers
@@ -16,5 +21,18 @@ var primeTester = function(n) {
 
 
 var primeSieve = function(start, end) {
-  // to do
+  var counter=0;
+  var newArray=[];
+  for(var i=start ; i<=end ; i++){
+  	counter=0;
+  	  for(var j=2;j<i;j++){
+  		  if(i % j === 0){
+  			 counter++;
+  		  }
+      }
+  	if(counter===0){
+       newArray.push(i);
+  	}
+  }
+  return newArray;
 };
