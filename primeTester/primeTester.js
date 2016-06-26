@@ -23,6 +23,9 @@ var primeTester = function(n) {
 
 var primeSieve = function(start, end) {
 	var primeNumbers=[];
+	if(start>end){
+		return primeSieve(end,start);
+	}
 	for (var i = start; i <= end; i++) {
 		if(primeTester(i)===true){
 			primeNumbers.push(i);
