@@ -24,7 +24,7 @@ var primeSieve = function(start, end) {
 	var listOfPrime = [];
   	for(var i = start; i < end; i++){
   		if(primeTester(i)){
-  			list.push(i);
+  			listOfPrime.push(i);
   		}
   	}
   	return listOfPrime;
