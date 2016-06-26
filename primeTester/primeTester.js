@@ -5,6 +5,10 @@
  */
 
 var primeTester = function(n) {
+  if(typeof n !== 'number'){
+    console.log("please insert a number");
+    return;
+  }
   for (var i=n-1; i>1; i--){
   	if (n%i === 0){
   		return false;
@@ -21,7 +25,11 @@ var primeTester = function(n) {
 
 var primeSieve = function(start, end) {
 	var primeArr = []
-	for (i=start; i<=end; i++){
+	if (typeof start !== 'number' || typeof end !== 'number'){
+      console.log("please insert two numbers");
+      return;
+  }
+  for (i=start; i<=end; i++){
 		if(primeTester(i)){
 			primeArr.push(i);
 		}
