@@ -17,7 +17,7 @@ var commonCharacters = function(string1, string2) {
 	arr=[];
 	for (var i = 0; i < string1.length; i++) {
 		for (var j = 0; j < string2.length; j++) {
-			if(string1[i] === string2[j] ){
+			if(string1[i] === string2[j]  && arr.indexOf(string2[j])===-1){
 				arr.push (string1[i]);
 			}
 
