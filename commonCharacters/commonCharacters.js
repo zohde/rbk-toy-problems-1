@@ -12,6 +12,7 @@
 
 //Works for any number of input strings:
 var commonCharacters = function(string1, string2) {
+<<<<<<< HEAD
 	var ARR= string1.split("");
 	var ARR2= string2.split("");
 	var result= [];
@@ -28,3 +29,7 @@ var commonCharacters = function(string1, string2) {
 	return result.join("");
 };
 
+=======
+  
+};
+>>>>>>> a506cfa3efd820b5f01a905a4fc47b7f98a2d111
