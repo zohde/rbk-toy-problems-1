@@ -6,6 +6,21 @@
 
 var primeTester = function(n) {
   // to do
+  var array = [];
+  for(var i=1; i<=n;i++){
+ array.push(i)
+  }
+  var array2= [];
+  for(var i=0;i<array.length;i++){
+  	var pass=array[i];
+  	if(n%pass===0){
+  		array2.push(pass);
+  	}
+  }
+  if(array2.length===2){
+  	return true;
+  }
+  return false;
 };
 
  /* Extra credit: Write a function that generates a list of all prime numbers
@@ -14,7 +29,12 @@ var primeTester = function(n) {
   * saucy, check out the Sieve of Atkin.)
   */
 
-
 var primeSieve = function(start, end) {
   // to do
+  var array=[];
+for(var i=start; i<end;i++){
+	array.push(primeTester())
+
+}
+
 };
