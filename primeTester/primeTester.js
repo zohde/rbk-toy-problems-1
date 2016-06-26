@@ -25,7 +25,7 @@ var primeTester = function(n) {
 
 var primeSieve = function(start, end) {
 	var primeArr=[]
-  for (var j = start; j < end; j++) {
+  for (var j = start; j <= end; j++) {
   	if(primeTester(j) === true){
   		primeArr.push(j);
   	}
