@@ -14,19 +14,14 @@
 var commonCharacters = function(string1, string2) {
 	var str1 = string1.split('');
 	var str2 = string2.split('');
-	var count = 0;
 	var str3 = '';
-	for(i=0; i<str1[i].length;i++){
-		for(j=0; j<str2[j].length;j++){
-			if(str1[i] === str2[j]){
+	for(i=0; i<str1.length;i++){
+		for(j=0; j<str2.length;j++){
+			if(str1[i] === str2[j] ){
 				console.log(str1);
 				console.log(str2);
-				 str3 = str1+str2[j];
-				count++;
-			} else {
-				
-				count++;
-			}
+				 str3 += str1[i]
+			} 
 		}
 	}
 	console.log(str3);
