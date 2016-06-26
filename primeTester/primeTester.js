@@ -5,8 +5,25 @@
  */
 
 var primeTester = function(n) {
-  // to do
+  
+  // the prime number is that number that factors it self or one one 
+  // am trying to make a conditon like that but all the numbers 
+  // Are factors it self or on a one 
+  //i make a for loop to itriete the 
+  for (var i = 2; i < n; i++) {
+  	if(n%i === 0){
+  		return false ;
+  	}
+
+  };
+  return true ;
+
+
+
 };
+
+
+
 
  /* Extra credit: Write a function that generates a list of all prime numbers
   * in a user-specified range (inclusive). If you're not quite sure where to start,
@@ -14,7 +31,3 @@ var primeTester = function(n) {
   * saucy, check out the Sieve of Atkin.)
   */
 
-
-var primeSieve = function(start, end) {
-  // to do
-};
