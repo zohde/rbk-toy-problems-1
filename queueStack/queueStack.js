@@ -43,7 +43,7 @@
    // called to remove an item from the `queue`
    Queue.prototype.dequeue = function(){
      // TODO: implement `dequeue`
-     for (var i=0;i<this.inbox.size;i++){
+     for (var i=0;i<this.inbox.size();i++){
      this.outbox.push(this.inbox.pop());
     
      };
