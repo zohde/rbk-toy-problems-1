@@ -29,14 +29,17 @@
  		if(input[i]===')'){
  			return false;
  		}else
- 		if(input[i]==='('&&input[i+1]!==')'){
- 			//console.log(false)
- 			 }
- 		 if(input[i]==='('){
- 			for (var j = 1; j < input.length; j++) {
- 				if(input[j]===')')
- 					return true;
- 				else{
+ 		//if(input[i]==='('&&input[i+1]!==')'){
+ 			// }
+ 			 debugger;
+ 			 if(input[i]==='(' && input[i+1]!==')')
+ 			 	return false
+ 			 	else{
+ 		 		if(input[i]==='('){
+ 					for (var j = 1; j < input.length; j++) {
+ 						if(input[j]===')')
+ 							return true;
+ 						else{
  					if(input[j]==='('){
  					  for (var k = j+1; k < input.length; k++) {
  					  		if(input[k]===')'){
@@ -44,14 +47,15 @@
  					  				return true;
  					  		}
  					  	}
- 						 return false;
 
  					}
  				}
+ 								 return false;
+
  			}
  		}	
- 		
- 		}
+ 	  }	
+ 	}
  };
  // 	balancedParens('(');  // false
  // *   balancedParens('()'); // true
