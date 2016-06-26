@@ -20,7 +20,7 @@ var primeTester = function(n) {
   * saucy, check out the Sieve of Atkin.)
   */
 
-
+// this is the smple way it work for 1 million but at 10 million it take 2 secand
 var primeSieve = function(start, end) { 
   var thePrime=[];
   for (var i = start; i < end; i++) {
