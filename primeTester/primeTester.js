@@ -15,8 +15,8 @@
 
 var primeTester = function(n) {
 	var flag=false;
-	if(n===2 || n=5 || ){ flag=true;}
-     else if(n%n===0 && n%1===0 && n%2!==0 && n%5!==0 && n%7!==0){
+	if(n===2){ flag=true;}
+     else if(n%n===0 && n%1===0 && n%2!==0 ){
   	      flag=true;
           }
 
