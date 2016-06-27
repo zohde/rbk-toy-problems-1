@@ -7,9 +7,7 @@
 var primeTester = function(n) {
   
   for (var i =2; i < n; i++) {
-  	/*if(n ===2){
-  		return false;
-  	}*/
+  	
   	if(n%i === 0){
   		return false; 
   	}
@@ -27,21 +25,30 @@ var primeTester = function(n) {
 
 var primeSieve = function(start, end) {
 	var primeSievearr=[];
-
 	if(end<start){
 		var t=start;
 		start=end;
 		end=t;
 	}
   for (var i =start; i <= end; i++) {
-  	
-
   	if(primeTester(i)){
   		primeSievearr.push(i);
-  	}
-  		
-  	
+  	}	
   }
   return primeSievearr;
+};
 
-}
+var primeSieve2 = function(start, end) {
+	var primeSievearr=[];
+	if(end<start){
+		var t=start;
+		start=end;
+		end=t;
+	}
+  for (var i =start; i <= end; i++) {
+  	if(primeTester(i)){
+  		primeSievearr.push(i);
+  	}	
+  }
+  return primeSievearr;
+};
