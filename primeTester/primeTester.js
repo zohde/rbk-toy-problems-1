@@ -12,6 +12,7 @@ var primeTester = function(n) {
   	return false
   }
   return true
+
 };
 
  /* Extra credit: Write a function that generates a list of all prime numbers
