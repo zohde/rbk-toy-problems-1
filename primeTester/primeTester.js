@@ -20,6 +20,7 @@ if(n === 2)
 return true ; 
 
 
+
 };
 
  /* Extra credit: Write a function that generates a list of all prime numbers
@@ -37,4 +38,5 @@ var primeSieve = function(start, end) {
 		if(primeTester(x)=== true) 
 			arr.push(x) ;}
 	return arr;  // to do
+  // to do
 };
