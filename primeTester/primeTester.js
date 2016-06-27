@@ -5,6 +5,7 @@
  */
 
 var primeTester = function(n) {
+<<<<<<< HEAD
 	var counter = 0;
 	for(var i = 0; i<=n; i++){
 		if(n%i === 0){
@@ -12,6 +13,9 @@ var primeTester = function(n) {
 		}
 	}
 	return counter <= 2
+=======
+  // to do
+>>>>>>> 41ca4f541867a5e438506ca07b5cff54d5b8a7f0
 };
 
  /* Extra credit: Write a function that generates a list of all prime numbers
@@ -21,6 +25,7 @@ var primeTester = function(n) {
   */
 
 
+<<<<<<< HEAD
 var primeSieve = function(start, end) {	
   var arr = []
   if(start > end){
@@ -63,3 +68,8 @@ var primeSieve2 = function(start, end) {
 // cool toy problem;
 
 // MY PRIME SIEVE 2 IS THE WORST WAY EVER TO IMPLEMENT PRIME NUMBERS
+=======
+var primeSieve = function(start, end) {
+  // to do
+};
+>>>>>>> 41ca4f541867a5e438506ca07b5cff54d5b8a7f0
