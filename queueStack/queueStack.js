@@ -33,8 +33,8 @@
 
 
 
-inbox= [1,2,3];=====>[2,3]
-outbox=[1,2,3];=====>[2,3]
+inbox= [1,2,3];[2,3]
+outbox=[1,2,3];[3,2]
 
 var length=inbox.length;
 
@@ -94,23 +94,23 @@ outbox=inbox;
 
    this.dequeue = function(){
      var length=inbox.size();
-     // if(length===1){
-     // 	result=inbox.pop();
-     // 	outbox.pop();
-     // 	return result;
+     if(length===1){
+     	result=inbox.pop();
+     	outbox.pop();
+     	return result;
      	
-     // 	}
+     	}
      for (var i = 0; i < length-1; i++) {
      	outbox.pop();
      }
      result=outbox.pop();
 
-     for (var i = 0; i < length; i++) {
+     for (var i = 0; i < length-1; i++) {
      	outbox.push(inbox.pop());
      }
      inbox.pop();
 
-     for (var i = 0; i < length-2; i++) {
+     for (var i = 0; i < length-1; i++) {
      	inbox.push(outbox.pop());
      }
      outbox=inbox;
