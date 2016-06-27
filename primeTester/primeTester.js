@@ -23,24 +23,8 @@ var primeTester = function(n) {
 
 var primeSieve = function(start, end) {
   var array = []
-  var bool;
   for(var i = start; i <= end; i++){
-  	  if(i === 1){
-  	  	array.push(1)
-  	  	array.push(2)
-  	  	i = i + 2
-  	  }
-  	  else if(i === 2){
-  	  	array.push(2)
-  	  	i++
-  	  }
-	  bool = true
-	  for(var j = 2; j < i; j++){
-	  	if(i % j === 0){
-	  		bool = false
-	  	}
-	  }
-	  if(bool){
+	  if(primeTester(i)){
 	  	array.push(i)
 	  }
   }
