@@ -17,12 +17,11 @@ var First =string1.split('');
 var Second = string2.split('');
 	for (var i = 0; i < First.length; i++) {
 		if(arr.indexOf(First[i])===-1){
-				
 			for (var j = 0; j < Second.length; j++) {
 				if(First[i]===Second[j]){
-					// if(arr.indexOf(First[i]) === -1){
+					if(arr.indexOf(First[i]) === -1){
 					arr.push(First[i])
-					// }
+					}
 				}
 			}
 		}	

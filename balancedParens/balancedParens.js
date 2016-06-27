@@ -50,8 +50,12 @@
   	  		counterfor2++
   	  }
   	}
-  	if(counterfor1===counterfor2||counterfor3===counterfor4||counterfor5===counterfor4){
+  	if(counterfor1===counterfor2){
   		return true;
-  	}
+  	}else if(counterfor3===counterfor4){
+      return true;
+    }else if (counterfor5===counterfor6){
+      return true;
+    }
   	return false;
  };
