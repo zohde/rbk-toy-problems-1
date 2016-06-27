@@ -35,7 +35,7 @@ var primeSieve = function(start, end) {
   }
   return result.toString();
 };
-
+/*
 var primeSieveA = function(start, end) {
   // to do
   var a=[];
@@ -55,3 +55,4 @@ var primeSieveA = function(start, end) {
   }
   return result.toString();;
 };
+*/
