@@ -21,6 +21,13 @@
  // 5- go to next item and reiterate. 
 
 var allAnagrams = function(string) { 
+	if(typeof string !== 'string'){
+		return;
+	};
+	if(string.length > 10){
+		alert('large input');
+		return;
+	}
 	var strArr = string.split("");
 	var combArr = [];
 	var n;
