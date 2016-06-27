@@ -1,6 +1,6 @@
 /*
- * Find the first item that occurs an even number of times in an array.
- * Remember to handle multiple even-occurrence items and return the first one.
+ * Find the first item in an array that occurs an even number of times.
+ * If there are multiple even-occurrence items, return the first one.
  * Return null if there are no even-occurrence items.
 */
 
