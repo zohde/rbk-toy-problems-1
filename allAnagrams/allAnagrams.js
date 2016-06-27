@@ -16,5 +16,13 @@
   */
 
 var allAnagrams = function(string) {
+	var str=[];
+	if (!string || typeof string !== 'string')
+		return 'error input'
+	function filter (before, string2){
+		if(string2.lenght===1){
+			
+		}
 
+	}
 };
