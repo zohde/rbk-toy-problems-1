@@ -40,7 +40,9 @@ var allAnagrams = function(string) {
 	var recursiveFunc = function(accumStr, count, indexArr){
 
 		if(count === string.length){
-			resultArr.push(accumStr);
+			if(resultArr.indexOf(accumStr) === -1){
+				resultArr.push(accumStr);
+			}
 		}
 
 		for(var i=0; i<string.length; i++){
