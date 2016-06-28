@@ -19,6 +19,11 @@
 
 
 var bind = function(func, context) {
+	return function (){
+
+	}
+
+
 };
 
  // * Function.prototype.bind:
