@@ -11,14 +11,18 @@
  // boundShout(); // alerts 'alice'
  // boundShout = bind(alice.shout, {name: 'bob'});
  // boundShout(); // alerts 'bob'
+
+
  //  example 2:
- //  var func = function(a, b){ return a + b };
+ // var func = function(a, b){ return a + b };
  // var boundFunc = bind(func, null, 'foo');
  // var result = boundFunc('bar');
  // result === 'foobar'; // true
 
 
 var bind = function(func, context) {
+		func.apply(context)
+		return func
 };
 
  // * Function.prototype.bind:
@@ -46,4 +50,5 @@ var bind = function(func, context) {
 
 
 Function.prototype.bind = function(a, args1, args2) {
+	this.call(a, args1, args2)
 };
