@@ -5,6 +5,7 @@
  */
 
 var primeTester = function(n) {
+<<<<<<< HEAD
 	var x=2;
     if (x && x<Math.sqrt(x)){
     	if (n%x!==0){
@@ -29,6 +30,11 @@ var primeTester = function(n){
 
 //not reaching if or while statements :/
 
+=======
+  // to do
+};
+
+>>>>>>> 41ca4f541867a5e438506ca07b5cff54d5b8a7f0
  /* Extra credit: Write a function that generates a list of all prime numbers
   * in a user-specified range (inclusive). If you're not quite sure where to start,
   * check out the Sieve of Eratosthenes on Wikipedia. (And if you're feeling
