@@ -18,7 +18,17 @@
  // result === 'foobar'; // true
 
 
-var bind = function(func, context) {
+var bind = function(func, context, ...args1) {
+	console.log(args1);
+	return function(...args2){
+		console.log(args1);
+		console.log(args2)
+		if(context){
+			func.call(context, args1, args2);
+		} else {
+			func.call(args1, args2);
+		}
+	}
 };
 
  // * Function.prototype.bind:
