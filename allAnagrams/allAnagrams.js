@@ -15,32 +15,35 @@
   * console.log(anagrams); // [ 'abc', 'acb', 'bac', 'bca', 'cab', 'cba' ]
   */
 
- var result=[];
+ 
  //i didn't finush yet....
 var allAnagrams = function(string) {
-	// var allAnagrams2=function(a){
-	// 	str=str+a;
-	// }
-	// if(str.length===string.length){
-
-	// }
-
-	result.push(string);	
-	  var arr=[];
-	 
-	//arr.push(string);
+	var result=[];
+	var str2="";
 	var array=string.split("");
-	
+	  var stringOne=function(a){
+		  var str="";
+		      str=str+a;
+		     if(str.length===string.length)
+			  return str;
+	          }
 	for(var j=0;j<array.length;j++){
-		for(var i=0;i<array.length;i++)
-		
-		arr.push(array[i]);
+		for(var i=j;i<array.length;i++){
+			str2=stringOne(array[i]);
+		}
+		result.push(str2);
 
-	//str=str+arra
-	//allAnagrams()
-	// }
-	
-	
-// }
- return arr;
+		}
+
+ return result;
+};
+var allAnagrams = function(string) {
+	var index=[i,j,k];
+
+	var str2="";
+	var array=string.split("");
+	  for(var c=0;c<string.length*2;c++){
+	  	str=string[index[0]]+string[index[1]]+
+	  }
+ return result;
 };
