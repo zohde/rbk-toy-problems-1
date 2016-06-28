@@ -17,4 +17,10 @@
 
 var allAnagrams = function(string) {
 
-};
+
+// we need a foor loop 
+// we have to make a recirtion 
+//i dont know what is the stoping condition 
+//i have it itreate the string 
+
+}

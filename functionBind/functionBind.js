@@ -3,7 +3,7 @@
  //  example 1:
  //  var alice = {
  //   name: 'alice',
- //   shout: function(){
+ //  s hout: function(){
  //     alert(this.name);
  //   }
  // }
@@ -21,29 +21,7 @@
 var bind = function(func, context) {
 };
 
- // * Function.prototype.bind:
- // *
- // * example 1:
- // *
- // * var alice = {
- // *   name: 'alice',
- // *   shout: function(){
- // *     alert(this.name);
- // *   }
- // * }
- // * var boundShout = alice.shout.bind(alice);
- // * boundShout(); // alerts 'alice'
- // * boundShout = alice.shout.bind({name: 'bob'});
- // * boundShout(); // alerts 'bob'
- // *
- // * example 2:
- // *
- // * var func = function(a, b){ return a + b };
- // * var boundFunc = func.bind(null, 'foo');
- // * var result = boundFunc('bar');
- // * result === 'foobar'; // true
- // *
-
+// bind is too hard 
 
 Function.prototype.bind = function(a, args1, args2) {
 };
