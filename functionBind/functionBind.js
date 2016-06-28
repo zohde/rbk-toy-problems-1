@@ -9,8 +9,10 @@
  // }
  // var boundShout = bind(alice.shout, alice);
  // boundShout(); // alerts 'alice'
+
  // boundShout = bind(alice.shout, {name: 'bob'});
  // boundShout(); // alerts 'bob'
+ 
  //  example 2:
  //  var func = function(a, b){ return a + b };
  // var boundFunc = bind(func, null, 'foo');
@@ -19,6 +21,13 @@
 
 
 var bind = function(func, context) {
+	var func2 = function(){
+	func.call(context,null);
+	}
+	return function(){
+		func2.apply(context,arguments);
+	}
+
 };
 
  // * Function.prototype.bind:
