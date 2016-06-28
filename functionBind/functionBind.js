@@ -19,7 +19,10 @@
 
 
 var bind = function(func, context) {
+	//var arg=Array.prototype.slice.call(1,arguments);
+	return func.apply(this,Array.prototype.slice.call(1,arguments));
 };
+
 
  // * Function.prototype.bind:
  // *
@@ -46,4 +49,6 @@ var bind = function(func, context) {
 
 
 Function.prototype.bind = function(a, args1, args2) {
+	return this.call(Array.prototype.slice.call(arguments))
+
 };
