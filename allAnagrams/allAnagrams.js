@@ -20,23 +20,32 @@
  // 4- call the function with remaining items
  // 5- go to next item and reiterate. 
 
-var allAnagrams = function(string) { //string = abc
-	var strArr = string.split(""); // strArr = [a,b,c]
-	var solCount=0;
-	var solutionFunc = function(arr, c){ //[b,c], 1
-		var solutions = []; // []
-		solCount++;
-		if (c === strArr.length){
-			solutionCount = 0;
-			return
-		}
-		for (var i=0; i<arr.length; i++){ // i = 0
-			var combination = [];	// []
-			combination.push(arr[i]); // [a]
-			combination.concat(solutionFunc(arr.map(function(e){return e}).splice(i,1)), solCount); 
-			solutions.push(combination.map(function(e){return e;}).join(""));
-		}
-		return solutions
+var allAnagrams = function(string) { 
+	if(typeof string !== 'string'){
+		return;
+	};
+	if(string.length > 10){
+		alert('large input');
+		return;
 	}
-	return solutionFunc(strArr.map(function(e){return e}), solCount);
+	var strArr = string.split("");
+	var combArr = [];
+	var n;
+	var solutions = [];
+	var solutionFunc = function(arr,ind){
+		if (ind === strArr.length){
+			solutions.push(combArr.map(function(e){return e}).join(""))
+			return;
+		}
+		for (var i=0; i<arr.length; i++){
+			var callbackArr = arr.map(function(e){return e;})
+			combArr[ind] = arr[i];
+			n = ind+1;
+			callbackArr.splice(i,1)
+			solutionFunc(callbackArr,n);
+		}
+		return;
+	}
+	solutionFunc(strArr, 0);
+	return solutions
 };
