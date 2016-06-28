@@ -19,8 +19,10 @@
 
 
 var bind = function(func, context) {
-    console.log(context)
-   return func;
+    
+   return function(){
+   	func.call(this , context)
+   };
 
    //we must send aparameter with fun
 
