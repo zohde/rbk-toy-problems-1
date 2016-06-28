@@ -19,6 +19,14 @@
 
 
 var bind = function(func, context) {
+	//calling slice function 
+ var args1 = arguments.slice.call(arguments);
+ var args2 = arguments.slice.call(arguments);
+	return function (){
+		// joining the arguments together and applying them to the func
+    var allArgs = args1 + args2;
+    func.apply(allArgs);	
+	}
 };
 
  // * Function.prototype.bind:
