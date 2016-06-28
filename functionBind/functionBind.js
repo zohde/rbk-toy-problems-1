@@ -17,8 +17,17 @@
  // var result = boundFunc('bar');
  // result === 'foobar'; // true
 
+ 
 
 var bind = function(func, context) {
+	
+	return function(){
+		// context.func = func;
+		// context.func();	
+		context.func.call(context);
+	}
+	
+
 };
 
  // * Function.prototype.bind:
@@ -47,3 +56,12 @@ var bind = function(func, context) {
 
 Function.prototype.bind = function(a, args1, args2) {
 };
+
+
+// this is the perfect problem because i do not understand it much 
+// lets try to work on it 
+// my bind function takes the first parameter which is a function 
+// what am doing makes no sense 
+// am surprised my first example worked , having no clue whats going on :D
+// can i get enough with running the first example
+// have to read a
