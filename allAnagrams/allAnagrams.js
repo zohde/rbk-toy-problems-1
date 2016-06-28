@@ -33,4 +33,60 @@ var allAnagrams = function(string) {
 		// allAnagrams(str) ;
 		return str ;
 	
-}
+
+// 	var allAnagrams = function(string) {
+//  +	var resultArr =[];
+//  +
+//  +	var recursiveFunc = function(accumStr, count, indexArr){
+//  +
+//  +		if(count === string.length){
+//  +			resultArr.push(accumStr);
+//  +		}
+//  +
+//  +		for(var i=0; i<string.length; i++){
+//  +			if(!indexOfFunc(indexArr, i)){
+//  +				recursiveFunc(accumStr + string[i], count+1, pushIntoArr(indexArr,i))
+//  +			}
+//  +		}
+//  +	}
+//  +
+//  +	recursiveFunc('',0, []);
+//  +
+//  +	return resultArr;
+//  +}; 
+// }
+
+
+
+
+
+// var allAnagrams = function(string) {
+//  +	var indexOfString=string.split("");
+//  +	
+//  +	var word=[];
+//  +
+//  +	if (result.length === factorial(indexOfString.length) ) {
+//  +		return result
+//  +	}
+//  +	
+//  +	while(word.length !== indexOfString.length){
+//  +		var char=indexOfString[random(indexOfString.length)];
+//  +		if (word.indexOf(char) === -1){
+//  +			word.push(char);
+//  +		}
+//  +	}
+//  +	if(result.indexOf(word.join("")) === -1){
+//  +		result.push( word.join(""))
+//  +	}
+//  +	return allAnagrams(string);
+//  +//creat the arr of words
+//  +
+//  +}; 
+
+
+
+
+
+
+
+
