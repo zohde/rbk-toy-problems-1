@@ -19,6 +19,9 @@
 
 
 var bind = function(func, context) {
+	// return function(){
+	// }
+  return func.apply(context); 		
 };
 
  // * Function.prototype.bind:
