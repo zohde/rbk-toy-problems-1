@@ -19,16 +19,18 @@
 
  
 
-var bind = function(func, context) {
-	
-	return function(){
-		// context.func = func;
-		// context.func();	
-		context.func.call(context);
-	}
-	
+var bind = function(func,context,arg1){
 
-};
+	var args = Array.prototype.slice.call(arguments,2);
+
+	return function(arg2){
+		var innerArgs = Array.prototype.slice.call(arguments);			
+		var allArguments = args.concat(innerArgs);
+		return func.apply(context,allArguments)
+	}
+}
+
+
 
  // * Function.prototype.bind:
  // *
