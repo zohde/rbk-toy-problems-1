@@ -18,8 +18,19 @@
  // result === 'foobar'; // true
 
 
+var obj = {firstName: 'Aws', lastName: 'Ahmed'}
+
+function firstName (obj){
+	return obj.firstName;
+}
+
 var bind = function(func, context) {
+	return function(){
+		return context.apply(context);
+	}
 };
+
+var boundShout = bind (firstName, obj);
 
  // * Function.prototype.bind:
  // *
