@@ -17,7 +17,7 @@
  // var result = boundFunc('bar');
  // result === 'foobar'; // true
 
-
+// To Do: work on the function later in the day!
 var bind = function(func, context) {
 	//calling slice function 
  var args1 = arguments.slice.call(arguments);
