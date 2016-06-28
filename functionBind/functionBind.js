@@ -19,6 +19,10 @@
 
 
 var bind = function(func, context) {
+	var args1=[].slice.call(context,arguments)
+	return function(){
+		
+	}
 };
 
  // * Function.prototype.bind:
