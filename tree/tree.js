@@ -9,27 +9,27 @@ Your tree should have methods named "addChild" and "contains".
 // tree.contains(2);   // yields 'true'
 
 var treeMaker = function(value){
- //tree code goes here!
- var treeArr=[];
- treeArr.value=value
-	treeArr.child=[]
-	console.log(treeArr)
+	var treeA=Object.create(treeMaker.methods);
+ 	treeA.child={}
+ 	treeA.value=value
+	treeA.key=0
+	console.log(treeA)
 };
 
 //methods go here!
 treeMaker.methods = {};
 
 treeMaker.methods.addChild = function(value){
-	treeArr.child.push(value)
-	console.log(treeArr)
+	this.child[this.key]=value
+	console.log(treeA.child)
 };
 
 treeMaker.methods.contains = function(val){
 	var resTree=true;
-   if(treeArr.value !== val) {
+   if(this.value !== val) {
    	resTree= false;
-   	for (var i =0; i< treeArr.child.length; i++) {
-   		if (treeArr.child[i].contains(val)){
+   	for (var key in treeArr.child) {
+   		if (this.child[key].contains(val)){
    			resTree = true;
    		}
    	}
