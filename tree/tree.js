@@ -10,13 +10,22 @@ Your tree should have methods named "addChild" and "contains".
 
 var treeMaker = function(value){
  //tree code goes here!
+ var tree==Object.create(methods);
+ tree. newtree={};
+ newtree.value=value;
+ console.log(newtree);
+ newtree.child=[];
+return tree;
 };
 
 //methods go here!
-treeMaker.methods = {};
+var methods = {
+addChild : function(value){
+	var smalltree=treeMaker(value);
+	this.smalltree.child.push(value);
+},
 
-treeMaker.methods.addChild = function(){
-};
-
-treeMaker.methods.contains = function(){
-};
+contains : function(){
+	// we will search about element in  the tree 
+}
+}
