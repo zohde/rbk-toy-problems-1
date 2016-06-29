@@ -16,5 +16,13 @@
   */
 
 var allAnagrams = function(string) {
+	var result=[];
+	function random(newString,str){
+		if(newString.length===string.length){
+			result.push(newString);
+		}
+		
+};
+
 
 };

@@ -12,5 +12,20 @@
 
 //Works for any number of input strings:
 var commonCharacters = function(string1, string2) {
-  
+	//var str1=string1.split(" ");
+	//var str2=string2.split(" ");
+    var common = " ";
+    for(var i=0;i<string1.length;i++){
+    	ch=string1.charAt(i);
+  	   if(string2.indexOf(ch) != -1){
+  	   		common=common+ch;
+  	   		
+  	   }
+  	}
+  	return common;
 };
+
+
+
+
+
