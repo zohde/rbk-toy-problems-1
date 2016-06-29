@@ -24,19 +24,16 @@ treeMaker.methods.addChild = function(value){
 };
 
 treeMaker.methods.contains = function(value){
-	 function find(value) {
-		for (var i = 0; i < this.Child.length; i++) {
-			if(this.Child[i].value === value){
+	 for (var i = 0; i < this.Child.length; i++) {
+		if(this.Child[i].value===value){
+			return true;
+		}else {
+			var thing= this.Child[i].contains(value);
+			if(thing)
 				return true;
-			}
-			return this.Child[i].contains(value);
 		}
 	}
-	if(find(value)){
-		return true;
-	}else{
-		return false;
-	}
+	return false;
 };
 
 
