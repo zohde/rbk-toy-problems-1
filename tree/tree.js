@@ -23,10 +23,15 @@ treeMaker.methods.addChild = function(value){
 	this.children.push(new treeMaker(value))
 };
 
-treeMaker.methods.contains = function(find){
-	for (var i=0; i<this.children.length; i++){
-		if(this.children[i].value === find)
-			return true;
-		return false;
+treeMaker.methods.contains = function(target, currentChild){
+	currentChild = currentChild || this;
+	if(target === currentChild.value){
+		return true;
 	}
+	for (var i=0; i< currentChild.children.length; i++){
+		if(this.contains(target,currentChild.children[i])){
+			return true
+		}
+	}
+	return false;
 };
