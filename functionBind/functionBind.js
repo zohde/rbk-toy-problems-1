@@ -1,4 +1,3 @@
-
 var bind = function(func, context, ...args) {
 	return function (){
 		arg = args.concat([].slice.call(arguments));
