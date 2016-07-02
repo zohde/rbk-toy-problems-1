@@ -1,12 +1,13 @@
-var FishTable = () => (
+var FishTable = () => {
+	return (
   <table>
     <tbody>
-      <FishTableRow />
-      <FishTableRow />
-      <FishTableRow />
+ 	{	window.fishData.map((fish)=>{
+ 		return (<FishTableRow fish={fish}/>)} )}
+ 	}
     </tbody>
   </table>
-);
+)}
 
 // Using Babel means that free floating `var` declarations normally
 // expected to be available in the global scope will not exist
