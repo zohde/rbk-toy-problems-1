@@ -9,8 +9,10 @@ Your tree should have methods named "addChild" and "contains".
 // tree.contains(2);   // yields 'true'
 
 var treeMaker = function(value){
-	this.child = [];
-	this.root = {parent: this.child};
+	var tree = Object.create(treeMaker.methods); // we used for prototypial
+	tree.child = [];
+	tree.value; = value;
+	return tree;
  
 };
 
