@@ -16,5 +16,12 @@ var fishData = [
   }
 ];
 
-// Render `FishTable` here
+
+
+render(){
+  return (
+   <div>
+   <FishTable value={this.}
+
+    )};
 
