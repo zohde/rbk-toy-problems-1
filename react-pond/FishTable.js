@@ -1,8 +1,8 @@
-var FishTable = ({FishTableRow}) => (
+var FishTable = ({fishData}) => (
   <table>
     <tbody>  
-    {FishTableRow.map(fishData=>  
-    <FishTableRow img={fishData}/>)}
+    {fishData.map(fish=>  
+    <FishTableRow fish={fish}/>)}
     </tbody>
   </table>
   
