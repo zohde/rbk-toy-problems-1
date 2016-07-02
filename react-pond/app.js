@@ -15,6 +15,7 @@ var fishData = [
     description: 'Why are these things so huge? THey\'re terrifying.'
   }
 ];
+ReactDOM.render(<FishTable />, document.getElementById('app'));
 
 // Render `FishTable` here
 
