@@ -4,7 +4,6 @@ var FishTable = () => {
     <tbody>
  	{	window.fishData.map((fish)=>{
  		return (<FishTableRow fish={fish}/>)} )}
- 	}
     </tbody>
   </table>
 )}
