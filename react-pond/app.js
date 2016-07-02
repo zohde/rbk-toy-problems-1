@@ -16,5 +16,4 @@ var fishData = [
   }
 ];
 
-// Render `FishTable` here
-
+ReactDOM.render(<FishTable />, document.getElementById('app'))
