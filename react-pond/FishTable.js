@@ -3,7 +3,7 @@ var FishTable = () => {
   <table>
     <tbody>
  	{	window.fishData.map((fish)=>{
- 		return (<FishTableRow fish={fish}/>)} )}
+ 		return (<FishTableRow key={fish.name} fish={fish}/>)} )}
     </tbody>
   </table>
 )}
