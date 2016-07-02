@@ -15,7 +15,7 @@ class FishTableRow extends React.Component {
         <td>
           <img src={this.props.fish.image} />
         </td>
-        {this.state.clicked ? <td className={this.props.fish.description}>Does anyone know where my dad is?</td> : null}
+        {this.state.clicked ? <td className={this.props.description}>Does anyone know where my dad is?</td> : null}
       </tr>
     )
   }
