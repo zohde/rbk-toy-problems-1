@@ -1,7 +1,7 @@
 var FishTable = (props) => (
   <table>
     <tbody>
-	    {props.fishData.map(fish =>
+	    {props.fishData.map((fish) =>
 	      <FishTableRow fish={fish} />
 	    )}
     </tbody>
