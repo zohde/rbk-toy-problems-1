@@ -131,6 +131,7 @@ $('.submit').on('submit', function(event) {
   var username = $('.usernameInput').val();
   $('#backButton').toggle();
   $('.title').text('Chat with JSON');
+  $('clear').embty)()
 
   postData($('.userInput').val(), username);
 });
