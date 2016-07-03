@@ -33,7 +33,10 @@ var processData = function(data) {
     }
   });
   displayData({'results' : sortedData}, userSelected);
+  setInterval(function(){ alert("Hello"); }, 3000);
+
 };
+
 
 var checkNewData = function(data) {
   var compDate = newestDate;
@@ -118,6 +121,8 @@ var postData = function(message, username) {
       console.log(data);
     }
   });
+  //clear out the message area
+  document.getElementById("userInput").reset();
 };
 
 //-------------- END VARIABLE/FUNCTION DECLARATIONS ---------------------
