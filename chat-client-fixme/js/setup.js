@@ -6,6 +6,9 @@ $.ajaxPrefilter(function(settings, _, jqXHR) {
 
 //-------------- BEGIN VARIABLE/FUNCTION DECLARATIONS ---------------------
 
+
+
+
 //This one calls the Parse server to grab data, and sends it to processData
 var getData = function() {
   $.ajax('https://api.parse.com/1/classes/msgs?order=-createdAt', {
@@ -119,6 +122,22 @@ var postData = function(message, username) {
     }
   });
 };
+
+
+//CODE is HERE
+  var clearMessages =function() {
+     $('#post').html('');
+     $("#userName").empty()
+     $("#userandroom").empty()
+  }
+
+
+ window.setInterval(function () {
+ getData()
+ 
+},2000)
+
+
 
 //-------------- END VARIABLE/FUNCTION DECLARATIONS ---------------------
 
