@@ -118,7 +118,15 @@ var postData = function(message, username) {
       console.log(data);
     }
   });
+  clearData();//clear the data after submit...
+
 };
+//function to clear the data after d
+var clearData=function(){
+
+  $('.userInput').text("");
+  $('.usernameInput').text("");
+}
 
 //-------------- END VARIABLE/FUNCTION DECLARATIONS ---------------------
 
@@ -131,6 +139,8 @@ $('.submit').on('submit', function(event) {
   var username = $('.usernameInput').val();
   $('#backButton').toggle();
   $('.title').text('Chat with JSON');
-
   postData($('.userInput').val(), username);
+  checkNewData($('.userInput').val());//after the post function it will check the massege...
+  
 });
+window.setInterval(getData(),3000);//get new data after every 3 seconds...
