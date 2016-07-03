@@ -91,6 +91,8 @@ var displayData = function(data, user) {
       getData();
     }
   });
+    setInterval(getData(), 1000)
+
 
   $(".addUser").on('click', function() {
     if (userSelectedGroup[$(this).closest('li').data('username')]) {
@@ -99,6 +101,7 @@ var displayData = function(data, user) {
       userSelectedGroup[$(this).closest('li').data('username')] = true;
     }
     getData();
+   
   });
 };
 
@@ -133,4 +136,6 @@ $('.submit').on('submit', function(event) {
   $('.title').text('Chat with JSON');
 
   postData($('.userInput').val(), username);
+    $('.userInput').val('').empty();
+    $('.usernameInput').val('').empty();
 });
