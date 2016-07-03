@@ -3,7 +3,7 @@ $.ajaxPrefilter(function(settings, _, jqXHR) {
   jqXHR.setRequestHeader("X-Parse-Application-Id", "voLazbq9nXuZuos9hsmprUz7JwM2N0asnPnUcI7r");
   jqXHR.setRequestHeader("X-Parse-REST-API-Key", "QC2F43aSAghM97XidJw8Qiy1NXlpL5LR45rhAVAf");
 });
-    
+     
 //-------------- BEGIN VARIABLE/FUNCTION DECLARATIONS ---------------------
 
 //This one calls the Parse server to grab data, and sends it to processData
