@@ -1,5 +1,5 @@
 class FishTableRow extends React.Component {
-  constructor() {
+  constructor(props) {
     super(props);
     this.state = {
       clicked: false
@@ -10,11 +10,11 @@ class FishTableRow extends React.Component {
   render() {
     return (
       <tr onClick={() => this.setState({clicked: !this.state.clicked})}>
-        <td className="fish-name">{props.fish.name}</td>
+        <td className="fish-name">{this.props.fish.name}</td>
         <td>
-          <img src={props.fish.image} />
+          <img src={this.props.fish.image} />
         </td>
-        {this.state.clicked ? <td className="fish-description">{props.fish.description}</td> : null}
+        {this.state.clicked ? <td className="fish-description">{this.props.fish.description}</td> : null}
       </tr>
     )
   }
