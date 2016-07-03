@@ -18,6 +18,8 @@ var getData = function() {
     }
   });
 };
+// to refresh the chat box every 3 sec 
+setInterval(getData,3000);
 
 // Here we sort the server messages by 'Created at' and send them to displayData
 var processData = function(data) {
@@ -40,6 +42,7 @@ var checkNewData = function(data) {
   var newDate = new Date(data.results[0].createdAt);
   if (newDate > compDate) {
     return true;
+
   } else {
     return false;
   }
@@ -120,6 +123,8 @@ var postData = function(message, username) {
   });
 };
 
+
+
 //-------------- END VARIABLE/FUNCTION DECLARATIONS ---------------------
 
 getData();
@@ -131,6 +136,10 @@ $('.submit').on('submit', function(event) {
   var username = $('.usernameInput').val();
   $('#backButton').toggle();
   $('.title').text('Chat with JSON');
-
   postData($('.userInput').val(), username);
+  // check for new data once I submit new msg
+  getData();
+  // clear userInput & user name Input once I submit
+   $('.userInput').val('');
+  $('.usernameInput').val('');
 });
