@@ -124,8 +124,6 @@ var postData = function(message, username) {
 
 getData();
 
-
-
 $('.submit').on('submit', function(event) {
   event.preventDefault();
   var username = $('.usernameInput').val();
@@ -134,3 +132,19 @@ $('.submit').on('submit', function(event) {
 
   postData($('.userInput').val(), username);
 });
+ 
+Setinterval(getData() , 1000) ; 
+
+// SetintervalTime will apear the Messages in the page without refreshing the
+//page each time . 
+
+
+
+app.clearData = function() { 
+  $('#username').val("");
+  $('.userInput').val("");
+};
+// Should Delete the data in the boxes after submitting the messages . 
+
+
+
