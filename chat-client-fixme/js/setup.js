@@ -6,10 +6,15 @@ $.ajaxPrefilter(function(settings, _, jqXHR) {
 
 //-------------- BEGIN VARIABLE/FUNCTION DECLARATIONS ---------------------
 
+
+//console.log(data)
 //This one calls the Parse server to grab data, and sends it to processData
 var getData = function() {
   $.ajax('https://api.parse.com/1/classes/msgs?order=-createdAt', {
     contentType: 'application/json',
+    // add the type GET to fetch the data from the server.
+    type: 'GET',
+    //data: 'data,
     success: function(data){
       processData(data);
     },
@@ -125,6 +130,9 @@ var postData = function(message, username) {
 getData();
 
 
+  setTimeout(function(){
+    getData()  }, 3000)
+
 
 $('.submit').on('submit', function(event) {
   event.preventDefault();
@@ -133,4 +141,8 @@ $('.submit').on('submit', function(event) {
   $('.title').text('Chat with JSON');
 
   postData($('.userInput').val(), username);
+
+  $('.usernameInput').val('');
+  $('.userInput').val('');
+
 });
