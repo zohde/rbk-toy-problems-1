@@ -15,8 +15,10 @@ var fishData = [
     description: 'Why are these things so huge? THey\'re terrifying.'
   }
 ];
+var App = ()=> (
+    <FishTable fishData={fishData}/>
+  )
 
-window.fishData = fishData;
-ReactDOM.render(<FishTable />, document.getElementById('app'))
+ReactDOM.render(<App />, document.getElementById('app'))
 // Render `FishTable` here
 
