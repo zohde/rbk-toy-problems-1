@@ -1,8 +1,8 @@
-var FishTable = () => {
+var FishTable = ({fishData}) => {
 	return (
   <table>
     <tbody>
- 	{	window.fishData.map((fish)=>{
+ 	{	fishData.map((fish)=>{
  		return (<FishTableRow key={fish.name} fish={fish}/>)} )}
     </tbody>
   </table>
