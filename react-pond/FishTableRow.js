@@ -10,11 +10,11 @@ class FishTableRow extends React.Component {
   render() {
     return (
       <tr onClick={() => this.setState({clicked: !this.state.clicked})}>
-        <td className="fish-name">Nemo</td>
+        <td className="fish-name">{this.props.fish.name}</td>
         <td>
-          <img src="http://tinyurl.com/h8o5szh" />
+          <img src={this.props.fish.image} />
         </td>
-        {this.state.clicked ? <td className="fish-description">{this.fishData.image}</td> : null}
+        {this.state.clicked ? <td className="fish-description">{this.props.fish.description}</td> : null}
       </tr>
     )
   }
