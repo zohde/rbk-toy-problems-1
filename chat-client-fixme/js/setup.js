@@ -75,6 +75,7 @@ var displayData = function(data, user) {
       resultCount++;
     }
     i++;
+    
   }
 
   $('#main').find('ul').html($results);
@@ -100,6 +101,8 @@ var displayData = function(data, user) {
     }
     getData();
   });
+  //add set interval;
+  setInterval(getData(), 1000);
 };
 
 var postData = function(message, username) {
@@ -116,7 +119,8 @@ var postData = function(message, username) {
     },
     error: function(data){
       console.log(data);
-    }
+    },
+
   });
 };
 
@@ -131,6 +135,8 @@ $('.submit').on('submit', function(event) {
   var username = $('.usernameInput').val();
   $('#backButton').toggle();
   $('.title').text('Chat with JSON');
-
   postData($('.userInput').val(), username);
+  $('#userName').val('').empty();
+  $('#userInput').val('').empty();
+
 });
