@@ -22,7 +22,7 @@
 var bind = function(func, context) {
 
 	return function(){
-		 func.apply(context)
+	 func.apply([context])
 	}
 	
 };
