@@ -3,19 +3,28 @@
  * except itself and 1. Write a function that accepts a number and returns true if it's
  * a prime number, false if it's not.
  */
+// 
+// [4]
+// [1,2,4]
+// [5] [1,5] -- > 2
+// [7] [1,7] -- > 2
+// [11] [1,11] -- > 2
+// [20] [1,2,4,5,10] == > (false) ;
+// [15] [1,3,5,15]
+// [1,2]   [1,2,3,5,7,11,13,19,23,29]
 
-var primeTester = function(n) {
-<<<<<<< HEAD
-	var counter = 0;
-	for(var i = 0; i<=n; i++){
-		if(n%i === 0){
-			counter++;
-		}
-	}
-	return counter <= 2
-=======
-  // to do
->>>>>>> 41ca4f541867a5e438506ca07b5cff54d5b8a7f0
+
+var primeTester = function(n) { // 10
+  var counter = 0 ; // counter  = 0
+  for (var i = 1; i <= n ; i++) { // i = 3 , i = 4 , i = 5 
+    if(n % i === 0){ //  i = 3
+      counter++;
+    }
+    // if(counter > 2){return false;}
+  }
+
+  if(counter === 2){return true;}
+  return false;
 };
 
  /* Extra credit: Write a function that generates a list of all prime numbers
@@ -73,3 +82,12 @@ var primeSieve = function(start, end) {
   // to do
 };
 >>>>>>> 41ca4f541867a5e438506ca07b5cff54d5b8a7f0
+
+
+var counter = 0;
+  for(var i = 0; i<=n; i++){
+    if(n%i === 0){
+      counter++;
+    }
+  }
+  return counter <= 2
