@@ -119,10 +119,12 @@ var postData = function(message, username) {
     }
   });
 };
-
+getData();
+// I Have to make a timer
+setInterval(function(){getData();},1000)
 //-------------- END VARIABLE/FUNCTION DECLARATIONS ---------------------
 
-getData();
+
 
 
 
@@ -133,4 +135,9 @@ $('.submit').on('submit', function(event) {
   $('.title').text('Chat with JSON');
 
   postData($('.userInput').val(), username);
+
+$('#userName').val('');
+$('#userInput').val('');
+
 });
+
