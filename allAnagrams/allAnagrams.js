@@ -19,25 +19,27 @@ var allAnagrams = function(string) {
 // input = "string";
 // output = ['','',''];
 // check for edge cases like if the input wasn't a string;
-// declare an array to store the output;
-	var arr = [];
 	if (typeof(string) !== 'string'){
 		return undefined;
 	} else {
-		// loop over the whole string length;
-		for (var i = 0; i < string.length; i++) {
-		// declare a variable that is a function which recurse over the remaining length of the string;
-		var str = function('string'){
-			// declaring a str2 to store the results of the recursive function.
-			var str2= '';
-			//idealy this function should take the first letter(i.e. index) of the string, 
-			// recurse over the remaining letters until it reaches the end of the length.
-			// return str2; 
+// declare an array to store the output;
+	var arr = [];
+	//starting with the recrusive function;
+	function anagram(strCurrent, strLeft){
+		//check the length of strLeft, if it's equal to 0 then push the curren str into the arr;
+		if (strLeft.length === 0){
+			arr.push(strCurrent);
+			return;
 		}
-
-		}
-		// outside the main loop will push str2 into arr
+		//loop over the strLeft;
+		for (var i = 0; i < strLeft.length; i++) {
+		var newStrCurrent = strCurrent + strLeft[i];
+		var newStrLeft = strLeft.slice(0,i)+strLeft.slice(i+1);
+		// recurse over newStrCurrent & newStrLeft;
+		anagram(newStrCurrent, newStrLeft);
+		};
 	}
-	// finally return arr;
+	anagram('',string)
+		
 	return arr;
 };
