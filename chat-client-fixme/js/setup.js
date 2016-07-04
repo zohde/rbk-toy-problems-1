@@ -129,7 +129,6 @@ var postData = function(message, username) {
 getData();
 
 
-
 $('.submit').on('submit', function(event) {
   event.preventDefault();
   var username = $('.usernameInput').val();
@@ -138,5 +137,6 @@ $('.submit').on('submit', function(event) {
   postData($('.userInput').val(), username);
   $('#userName').val('').empty();
   $('#userInput').val('').empty();
+  // should do a get somewhere in here
 
 });
