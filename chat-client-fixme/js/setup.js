@@ -134,7 +134,9 @@ $('.submit').on('submit', function(event) {
   $('.title').text('Chat with JSON');
 
   postData($('.userInput').val(), username);
+  // There should be some kind of get here.
 });
+// This should be inside of the submit section.
 $('input[type="text"], username').val('');
 $('input[type="text"], userInput').val('');
 setInterval(function() {getData()}, 2000)
