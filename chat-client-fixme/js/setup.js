@@ -129,7 +129,7 @@ var postData = function(message, username) {
 
 getData();
 
-
+// this should be set interval
   setTimeout(function(){
     getData()  }, 3000)
 
@@ -140,6 +140,7 @@ $('.submit').on('submit', function(event) {
   $('#backButton').toggle();
   $('.title').text('Chat with JSON');
 
+  // a get should happen here 
   postData($('.userInput').val(), username);
 
   $('.usernameInput').val('');
