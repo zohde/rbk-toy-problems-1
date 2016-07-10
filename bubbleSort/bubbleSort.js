@@ -85,6 +85,7 @@ var bubbleSort = function(array) {
 return array;
 };
 /*
+Salah Alomari:
 	In this type of comparison the time complexity would be around O(nlogn), 
 	as the recursive function inside will be called around n times, and 
 	however on each call, a border variable will move backwards making the for loop iterate one time less everytime
