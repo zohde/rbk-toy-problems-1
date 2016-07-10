@@ -29,6 +29,25 @@
 
 // Feel free to add helper functions if needed
 
-var bubbleSort = function(array) {
 
-};
+
+var bubbleSort = function(array) {
+ 	var temp=0;
+ 	var sort=false;
+      for (var i =0 ; i<=array.length-1 ; i++) { //n
+        for (var j = 0; j <=array.length-1 ; j++) {//n
+          if(array[j] > array[j+1]) {//1
+            
+             temp = array[j];//1
+            array[j] = array[j+1];//1
+            array[j+1] = temp;//1
+            sort=true
+          }
+        }        
+      }
+      if(sort===true)
+      return array;
+    }
+//array=[2,1,3,0,-1]==>[-1,0,1,2,3]
+
+//Time Complexity=O(n^2)
