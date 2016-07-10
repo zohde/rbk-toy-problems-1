@@ -45,3 +45,4 @@ var bubbleSort = function(array) {
 	return array;
 
 };
+// the complexcity is n^2
