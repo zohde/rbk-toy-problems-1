@@ -29,6 +29,25 @@
 
 // Feel free to add helper functions if needed
 
+//time complexty is O(n^2)
 var bubbleSort = function(array) {
 
-};
+    var x;
+ while(x !== 0) { 
+   	//O(n)
+   	var temp ;
+        x = 0 ;
+        for (var i=0; i<array.length-1; i++) {
+        	//O(n)
+            if (array[i]> array[i+1]) {
+            temp= array[i];
+            array[i] = array[i+1];
+            array[i+1] = temp;
+             x = 1 ;
+            }
+        }
+   
+	}
+	return array ;
+}
+
