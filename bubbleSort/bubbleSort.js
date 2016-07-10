@@ -44,7 +44,7 @@ var bubbleSort = function(array) {
 		for(var i = 0; i < array.length - 1; i++){
 
 			var temp = swap(array[i], array[i+1])
-			
+
 			array[i] = temp[0]
 			array[i+1] = temp[1]
 
@@ -61,8 +61,6 @@ var bubbleSort = function(array) {
 			return array
 		}
 	}
-	
-	
 
 };
 
