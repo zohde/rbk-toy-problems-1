@@ -30,5 +30,17 @@
 // Feel free to add helper functions if needed
 
 var bubbleSort = function(array) {
-
-};
+	var temp;
+	for (var i = 0; i < array.Length; i++) {
+		for(var h=0;h<array.length;h++){
+            if( array[i] > array[h]){
+            	var temp = array[i]
+				array[i]=array[h];
+				array[h]=temp;
+			}
+		}
+	}
+	return array;
+          
+}
+// i tried to made tow for loop one starting from the
