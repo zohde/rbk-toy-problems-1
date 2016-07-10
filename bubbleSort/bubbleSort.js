@@ -30,5 +30,43 @@
 // Feel free to add helper functions if needed
 
 var bubbleSort = function(array) {
-
+	var small;
+	var counter = 0;
+	
+	for (var i = 0; i < array.length; i++) {
+		
+			if(array[i+1]<array[i]){
+				small=array[i+1];
+				array[i+1]=array[i];
+				array[i]=small;	
+		    }
+	}
+		    counter++;
+			
+	if(counter<array.length-1){
+		
+	bubbleSort(array.slice(counter))	    
+	}
+	return array;
 };
+
+// var bubbleSort = function(array){
+// 	var arr = [];
+// 	var small;
+// 	for (var i = 0; i < array.length; i++) {
+// 		if(array[i+1]<array[i]){
+// 				// small=array[i+1];
+// 				// array[i+1]=array[i];
+// 				// array[i]=small;	
+// 				small=array[i+1];
+// 		    }else {
+// 		    	small =array[i];
+// 		    }
+
+// 	}
+// 	arr.push(small);
+// 	var array2=array.slice(small,1);
+
+// 	bubbleSort(array2);
+
+// }
