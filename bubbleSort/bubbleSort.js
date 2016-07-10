@@ -29,6 +29,67 @@
 
 // Feel free to add helper functions if needed
 
-var bubbleSort = function(array) {
+// var bubbleSort = function(array) {
+	
+// 	var solution = function(border){
+// 		if(border === 0){
+// 			return;
+// 		}
+// 		else {
+// 			var compToken = array[0]
+// 			var swaps = 0;
+// 			for (var i=1; i<border; i++){
+// 				if (array[i]<=compToken){
+// 					array.splice(border, 0, array[i]);
+// 					array.splice(i,1);
+// 					border --;
+// 					i--;
+// 				}
+// 			}
+// 			array.splice(border, 0, compToken)
+// 			array.splice(0,1);
+// 		}
+// 		return solution(border);
+// 	}
+// 	solution(array.length);
+// return array;
+// };
+/*
+	The above is an incomplete function to sort the array using a compare Token, where a border is chosen
+	this algorithm takes less time, with a time complexity of O(logn)
+	however due to time limits it was not completed.
+*/
 
+var bubbleSort = function(array) { 
+	
+	var solution = function(border){ 
+		if(border === 1){
+			return;
+		}
+		var swaps=0;
+		for (i=0; i<border; i++){
+			if (array[i]<array[i+1]){
+				var temp = array[i+1];
+				array[i+1] = array[i];
+				array[i] = temp;
+				swaps++;
+			}
+		}
+		if (swaps===0){
+			return;
+		}
+		border--;
+		return solution(border);
+	}
+	solution(array.length-1);
+return array;
 };
+/*
+	In this type of comparison the time complexity would be around O(nlogn), 
+	as the recursive function inside will be called around n times, and 
+	however on each call, a border variable will move backwards making the for loop iterate one time less everytime
+	That is why its n * logn,
+	with the swaps variable though, in cases where the array is somehow already sorted
+	then less iterations are needed, however, in an array that is not sorted, then the function will take the same
+	so even the swap indicator won't make a difference in the Big O complexity.
+*/
