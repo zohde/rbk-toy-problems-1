@@ -27,14 +27,13 @@ addChild : function(value){
 
 contains : function(query){
 	// we will search about element in  the tree 
-var flage =false;
+
   if(this.value == query){
-	flage=true;
    	return flage;
 	}
   for (var i = 0; i < this.child.length; i++) {
-	flage=flage || this.child[i].contains(query);
+	this.child[i].contains(query);
 	} 
-   return flage ;
+   
 }
 }
