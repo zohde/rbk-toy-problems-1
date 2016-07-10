@@ -30,5 +30,41 @@
 // Feel free to add helper functions if needed
 
 var bubbleSort = function(array) {
+	
+	var swap = function(x, y){
+		if(x > y){
+			return [y, x, true]
+		} else {
+			return [x, y, false]
+		}
+	}
+
+	var swapSort = function(array) {
+		var count = 0
+		for(var i = 0; i < array.length - 1; i++){
+
+			var temp = swap(array[i], array[i+1])
+			
+			array[i] = temp[0]
+			array[i+1] = temp[1]
+
+			if(!temp[2]){
+				count++
+			}
+		}
+
+		return count
+	}
+
+	for(var i = 0; i < array.length; i++){
+		if(swapSort(array) === array.length - 1){
+			return array
+		}
+	}
+	
+	
 
 };
+
+
+
