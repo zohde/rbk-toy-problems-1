@@ -30,5 +30,21 @@
 // Feel free to add helper functions if needed
 
 var bubbleSort = function(array) {
-
+	for(var i=0;i<array.length;i++){
+		var flag=false;
+		for(var j=0;j<array.length-1;j++){
+			if(array[j]>array[j+1]){
+				flag=true;
+				var temp=array[j];
+				array[j]=array[j+1];
+				array[j+1]=temp;
+			}
+		}
+		if(!flag){
+			break;
+		}
+	}
+	return array;
 };
+///the time complixity is O(N^2)
+
