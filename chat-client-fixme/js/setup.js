@@ -91,7 +91,7 @@ var displayData = function(data, user) {
       getData();
     }
   });
-    setInterval(getData(), 1000)
+    
 
 
   $(".addUser").on('click', function() {
@@ -103,6 +103,7 @@ var displayData = function(data, user) {
     getData();
    
   });
+  setInterval(getData(), 1000)
 };
 
 var postData = function(message, username) {
