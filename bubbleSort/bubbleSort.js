@@ -32,7 +32,8 @@
 var bubbleSort = function(array) {
 	var small;
 	var counter = 0;
-	
+	var arr=[];
+	var w=[];
 	for (var i = 0; i < array.length; i++) {
 		
 			if(array[i+1]<array[i]){
@@ -42,12 +43,12 @@ var bubbleSort = function(array) {
 		    }
 	}
 		    counter++;
-			
+	arr.push(array[length-1])		
 	if(counter<array.length-1){
-		
-	bubbleSort(array.slice(counter))	    
+		 w=array.slice(counter);
+	bubbleSort(w)	    
 	}
-	return array;
+	return arr;
 };
 
 // var bubbleSort = function(array){
