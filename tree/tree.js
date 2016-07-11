@@ -37,7 +37,7 @@ treeMaker.methods.contains = function(value){
 				if(contain.children[i].value===value){
 					return true;
 				}else{
-					contain=children[i];
+					contain=contain.children[i];
 				}
 			}
 		}
