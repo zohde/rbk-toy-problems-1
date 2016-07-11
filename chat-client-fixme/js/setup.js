@@ -121,8 +121,13 @@ var postData = function(message, username) {
 };
 
 //-------------- END VARIABLE/FUNCTION DECLARATIONS ---------------------
+<<<<<<< HEAD
 // Here is the setInterval for getting the data every 2 seconds  //
 setInterval(getData,2000); 
+=======
+
+getData();
+>>>>>>> 9d788c4b87ad1b450cbdd094662fbe6e93c948b0
 
 
 
@@ -131,8 +136,12 @@ $('.submit').on('submit', function(event) {
   var username = $('.usernameInput').val();
   $('#backButton').toggle();
   $('.title').text('Chat with JSON');
+<<<<<<< HEAD
   getData(); // as soon as you submit , check for new messages .
   $('#userName').val(''); // As soon as you click submit , clear out the userName area
   $('#userInput').val(''); // As soon  as you click submit,  clear out the Message Area .
+=======
+
+>>>>>>> 9d788c4b87ad1b450cbdd094662fbe6e93c948b0
   postData($('.userInput').val(), username);
 });
