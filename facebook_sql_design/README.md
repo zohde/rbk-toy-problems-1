@@ -9,4 +9,4 @@ Post has many Likes, many Comments and one User
 Comment has a User
 Likes has many Users and one Post
 
-* [ ] Optional question for your brain: User to User has Friendship.
+* [1] Optional question for your brain: User to User has Friendship.
