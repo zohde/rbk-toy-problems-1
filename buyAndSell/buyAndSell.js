@@ -38,6 +38,7 @@ var maximumProfit  = function(array) {
 			maxAndMin['maxIndex']=i;
 		}
 	}
-	return 'Sell in day '+ (maxAndMin.minIndex+1) +' for:  ' + maxAndMin.min +
-		   '$  and buy in day ' + maxAndMin.maxIndex +' for: '+ maxAndMin.max+'$';
+	console.log( 'Sell in day '+ (maxAndMin.minIndex+1) +' for:  ' + maxAndMin.min+'$')
+	console.log( 'and buy in day ' + maxAndMin.maxIndex +' for: '+ maxAndMin.max+'$')
+	return 'the profit is ' + (maxAndMin.max - maxAndMin.min)+'$';
 };
