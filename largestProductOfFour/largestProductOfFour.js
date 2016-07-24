@@ -36,7 +36,7 @@
 */
 
 
-var largestProductOfThree = function(array) {
+var largestProductOfFour = function(array) {
 };
 
 
