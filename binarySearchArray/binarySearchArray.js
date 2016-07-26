@@ -12,6 +12,7 @@
 
 var binarySearch = function (array, target) {
   var index =array;
+  
    function re(array) {
            var mid = Math.floor(array.length / 2);
             if (array[mid] === target) {
