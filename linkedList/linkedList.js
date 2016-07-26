@@ -19,18 +19,21 @@
 
 var LinkedList = function(){
   this.list=[];
-  this.tail=null
+  this.head=null;
+  this.tail=null;
 };
 
 //write methods here!
 
 LinkedList.prototype.addToTail = function(value){
 	this.list.push(value);
+	this.head=this.list[0];
 	this.tail=this.list[this.list.length - 1];
 };
 
 LinkedList.prototype.removeHead = function(){
 	this.list.shift()
+	this.head=[this.list[0]]
 };
 
 LinkedList.prototype.contains = function(value){
