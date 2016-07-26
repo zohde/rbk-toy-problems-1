@@ -18,22 +18,28 @@
 
 
 var LinkedList = function(){
-  //fill me in!
+  this.list=[];
+  this.tail=null
 };
 
 //write methods here!
 
-LinkedList.prototype.addToTail = function(
-){
+LinkedList.prototype.addToTail = function(value){
+	this.list.push(value);
+	this.tail=this.list[this.list.length - 1];
 };
 
 LinkedList.prototype.removeHead = function(){
+	this.list.shift()
 };
 
-LinkedList.prototype.contains = function(
-){
+LinkedList.prototype.contains = function(value){
+	if(this.list.indexOf(value) !== -1){
+		return true;
+	} 
+	return false;
 };
 
-LinkedList.prototype.makeNode = function(
-){
+LinkedList.prototype.makeNode = function(){
+	this.list.push(new LinkedList());
 };
