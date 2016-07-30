@@ -12,9 +12,20 @@
   *
   */
 var deepEquals = function(obj1, obj2){
-  
+  var isSame=0;
   for(var k in obj1){
-    console.log(obj1[k])
-    console.log(obj2[k]);
+    for (var f in obj1){
+      if( obj1[k] === obj2[f] ){
+        if (typeof obj1[k] === "object" && typeof obj2[f] === "object"){
+        deepEquals(obj1[k],obj2[f]);
+        }
+        isSame++;
+      }
+    }
+  }
+  if(Object.keys(obj2).length === isSame){
+    return true;
+  }else{
+    return false
   }
 };
