@@ -27,3 +27,64 @@
   *  Why not filter your results to only return words contained in that file?
   *
   */
+
+var getRandom=function (arrayLength) {
+  return Math.floor(Math.random() * arrayLength.length);
+}
+
+var telephoneWords=function (string) {
+  var TelePad={
+    2:['a','b','c'],
+    3:['d','e','f'],
+    4:['g','h','i'],
+    5:['j','k','l'],
+    6:['m','n','o'],
+    7:['p','q','r','s'],
+    8:['t','u','v'],
+    9:['w','x','y','z'],
+    0:[" "]
+  }
+
+  var word="";
+  var words=[];
+  var numbers=string.split("");
+  
+  for (var i = 0; i < numbers.length; i++) {
+      for(var letter in TelePad){ 
+        if (letter === numbers[i]){
+          getRandom(TelePad[letter]);
+          word+= TelePad[letter][getRandom(TelePad[letter])]
+          if(word.length > 3 ){
+            if(words.indexOf(word) > 0){
+              words.push(word);
+            } 
+            word="";
+          } 
+        }    
+      }
+    }
+    return words 
+}
+
+    // for (var num in TelePad){
+    //   if (numbers[i] === num){
+    //     for(var l in TelePad[num] ){
+    //       word+=l;
+    //       if(word.length>3){
+    //         words.push(word);
+    //         word="";
+    //       }
+    //     }
+    //   }
+
+
+
+
+
+
+
+
+
+
+
+
