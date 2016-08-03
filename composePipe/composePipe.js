@@ -35,11 +35,41 @@
  */
 
 'use strict';
+var add2 = function(number){ return number + 2; }
+var multiplyBy3 = function(number){ return number * 3; }
+
+var pipe = function(func1,func2){
+  var listOfFunction={};
+  for (var i = 0; i < arguments.length; i++) {
+    listOfFunction[arguments[i]+i]=arguments[i];
+  }
+  return function (value) {
+    for(var f in listOfFunction){
+      var thefunction =listOfFunction[f]
+      console.log(thefunction(value))
+    }
+  };
+};
+
+var addAndMultiplyTwice = pipe(add2, multiplyBy3, multiplyBy3);
+
+//==============================================================================
+
+ var greet = function(name){ return 'hello ' + name;}
+ var exclaim = function(statement) { return statement.toUpperCase() + '!';}
 
 var compose = function(){
-
+  var listOfFunction={};
+  for (var i = arguments.length - 1; i >= 0 ; i--) {
+    listOfFunction[arguments[i]+i]=arguments[i];
+  }
+  return function (value) {
+    for(var f in listOfFunction){
+      var thefunction =listOfFunction[f]
+      console.log(thefunction(value))
+    }
+  };
 };
 
-var pipe = function(){
 
-};
+var welcome = compose(greet, exclaim);
