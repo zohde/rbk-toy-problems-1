@@ -14,7 +14,7 @@
    var greet = function(name){ return 'hello ' + name;}
    var exclaim = function(statement) { return statement.toUpperCase() + '!';}
    var welcome = compose(greet, exclaim);
-   welcome('phillip'); // 'hello PHILLIP!'
+   welcome('phillip'); // 'HELLO PHILLIP!'
 
  *
  * Step 2: Implement the function Pipe:
