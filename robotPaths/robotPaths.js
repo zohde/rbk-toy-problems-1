@@ -21,6 +21,7 @@ var makeBoard = function(n) {
       board[i].push(false);
     }
   }
+  
   board.togglePiece = function(i, j) {
     this[i][j] = !this[i][j];
   }
@@ -34,7 +35,55 @@ var makeBoard = function(n) {
 //var myBoard = makeBoard(5);
 //The answer for a board size 5 is 8512 unique paths
 
-var robotPaths = function(/*you can pass any parameters you need*/) {
+var robotPaths = function(myBoard) {
+  var i=0,j=0;
+  while(!myBoard[myBoard.length-1][myBoard.length-1]){
+   
 
+    //if it is in the top line
+    if( i === 0){
+      if (j == 0) {// if it in top left
+        if(myBoard.togglePiece(i+1,j) !== true && myBoard.togglePiece(i,j+1) !== true){
+
+  
+        }else if(myBoard.togglePiece(i+1,j) !== true && myBoard.togglePiece(i,j-1) !== true && myBoard.togglePiece(i,j+1) !== true){
+
+        }        
+      }
+    }
+
+
+    //if it is in the lift line
+    if( j === 0){
+      if(myBoard.togglePiece(i+1,j) !== true &&  myBoard.togglePiece(i,j-1) !== true){
+
+      }
+    }
+
+    // if  it is in the bottom line
+    if( i = myBoard.length-1){
+      if (j === 0){
+        
+      }
+      if(myBoard.togglePiece(i-1,j) !== true &&  myBoard.togglePiece(i,j-1) !== true && myBoard.togglePiece(i,j-1) !== true){
+
+      }
+    }
+
+
+      
+  }
 }
+
+       //myBoard.togglePiece(i,j+1) !== true &&
+       //myBoard.togglePiece(i-1,j) !== true &&
+
+
+
+
+
+
+
+
+
 
