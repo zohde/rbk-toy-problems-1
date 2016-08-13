@@ -13,8 +13,11 @@ See example usage to understand what arguments are passed to the callback.
 
 Array.prototype.map = function(callback){
 	var result = [];
-	console.log(this.forEach(callback));
-	//result.push(this.forEach(callback));
+	//console.log(this.forEach(callback));
+	
+	this.forEach(function(entry, index, arr){
+   		result.push(callback(entry, index, arr))
+   })
 	return result;   
 }
 
@@ -77,6 +80,5 @@ What kind of candy do you like?
 Your answer: 
 
 */
-
 
 
