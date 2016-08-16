@@ -16,11 +16,21 @@ Try to optimize your solution for time complexity.
 */
 
 function scramble(str1,str2){
-
+	var count = 0;
+	for (var i = 0; i < str2.length; i++) {
+		if(str1.indexOf(str2[i]) !== -1){
+			count++;
+		}
+	}
+	if(count === str2.length){
+		return true;
+	}else{
+		return false;
+	}
 };
 
 //What is the time complexity of your solution?
-var timeComplexity = 'O(??)';
+var timeComplexity = 'O(n)^2';
 
 
 /*
@@ -43,15 +53,50 @@ or an empty array if no items were removed (you can check how it works with buil
 
 The original array should be modified after running splice.
 
-Example:
+Example:*/
 var arr = [1,2,3,4,5,6];
 //Remove 2 elements starting at index 2 and insert 7:
 arr.splice(2,2,7);//should return [3,4] - the elements that were removed
-console.log(arr); //should [1,2,7,5,6] - the original array was modified
-*/
+//console.log(arr); //should [1,2,7,5,6] - the original array was modified
+
 
 Array.prototype.splice = function(from,count){
+	var res = [];
+	var leftSide =[];
+	var rightSide = []
+	if(from < 0){
+		from = 0;
+	}
 
+	for (var i = 0; i < this.length; i++) {
+		if( i >= from && i < from+count){
+			res.push(this[i])
+		}else if(i < from){
+			leftSide.push(this[i]);
+		}else if(i >= from+count){
+			rightSide.push(this[i])
+		}
+
+	}
+	//clear the array
+	for (var i = 0; i < this.length; i++) {
+		this.shift()
+		i--;
+	}
+	//add the left side
+	for (var i = 0; i < leftSide.length; i++) {
+		this.push(leftSide[i])
+	}
+	//add the arguments
+	for (var i = 2; i < arguments.length; i++) {
+		this.push(arguments[i])
+	}
+	//add the right side
+	for (var i = 0; i < rightSide.length; i++) {
+		this.push(rightSide[i])
+	}
+	return res;
 }
+
 
 
