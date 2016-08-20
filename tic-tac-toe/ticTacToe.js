@@ -42,8 +42,11 @@ function ticTacToe(board){
 			if (board[i][j] === 2) {
 				o++;
 			}
-			if (x === 3 || o ===3) {
+			if (x === 3 ) {
 				return 1;
+			}
+			if(o === 3){
+				return 2;
 			}
 		}
 	}
@@ -68,7 +71,7 @@ function ticTacToe(board){
 		return 1;
 	}
 	if(board[0][0]  === 2 && board[1][1] === 2 && board[2][2] === 2){
-		return 1;
+		return 2;
 	}
 
 	//right digonal
@@ -76,7 +79,7 @@ function ticTacToe(board){
 		return 1;
 	}
 	if(board[2][0]  === 2 && board[1][1] === 2 && board[0][2] === 2){
-		return 1;
+		return 2;
 	}
 
 	
