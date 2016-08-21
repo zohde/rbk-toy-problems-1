@@ -48,7 +48,14 @@ pyramid(1666); // should === 16
 */
 
 function pyramid(cans){
-
+	var result = [];
+	for (var i = 1; i < cans; i++) {
+		result.push(Math.pow(i,2));
+		cans = cans - Math.pow(i,2)
+		if(cans < 0){
+			return result.length -1
+		}
+	}
 };
 
 
