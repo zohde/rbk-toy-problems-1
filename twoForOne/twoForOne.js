@@ -12,9 +12,16 @@ abc(); // should return 'b' on this second call
 abc(); // should return 'c' on this third call
 abc(); // should return 'a' again on this fourth call
 */
-
 function makeLooper(string){
-
+	var count = 0;
+	return function () {
+		var res = string[count]
+		count++;
+		if(count === string.length){
+			count =0;
+		}
+		return res;
+	}
 };
 
 
