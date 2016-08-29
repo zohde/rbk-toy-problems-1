@@ -35,14 +35,3 @@ var longestPalindrome = function (string) {
   return max
 };
 
-
-
-
-
-
-
-
-
-
-
-
