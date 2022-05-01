@@ -62,5 +62,5 @@ jar.getConcentration('apple'); //should be 1 or 100%
 jar.add(200, 'banana');
 jar.getTotalAmount();// should be 400
 jar.getConcentration('apple'); //should be 0.5 or 50%
-jar.getConcentration('banana'); //should be 0.5 or 50%
+jar.getConcentration('banana'); //should be 0.5 or 50%  this is a test
 */
